@@ -12,13 +12,13 @@ const HireMePopup = () => {
       setTimeout(() => setIsVisible(false), 5000);
     };
 
-    // Initial delay of 15 seconds
+    // Initial delay of 20 seconds
     const initialTimeout = setTimeout(() => {
       showPopup();
-    }, 15000);
+    }, 20000);
 
-    // Repeat every 15 seconds
-    const interval = setInterval(showPopup, 15000);
+    // Repeat every 20 seconds
+    const interval = setInterval(showPopup, 20000);
 
     return () => {
       clearTimeout(initialTimeout);
@@ -119,7 +119,7 @@ const HireMePopup = () => {
                 {/* Contact Info */}
                 <div className="mt-6 text-center text-gray-500 flex items-center justify-center gap-2">
                   <FaEnvelope />
-                  <span>ajaykumar@gmail.com</span>
+                  <span>ajaysurada21@gmail.com</span>
                 </div>
               </div>
 
