@@ -26,40 +26,37 @@ const Projects = () => {
       image: "https://via.placeholder.com/400x300/44337a/ffffff?text=ML+Platform"
     },
     {
-      title: "CI/CD Automation Tool",
+      title: "healthcare-provider-fraud-detection",
       description: "Automated CI/CD pipeline tool with custom workflows and cloud integrations.",
-      tags: ["TypeScript", "Node.js", "Docker", "AWS"],
       links: {
-        github: "https://github.com/Subham-Maity/java-master",
+        github: "https://github.com/ajay-kumar2109/healthcare-provider-fraud-detection",
       },
-      image: "https://via.placeholder.com/400x300/234e52/ffffff?text=CI/CD+Tool"
+      image: "https://fakeimg.pl/600x400/408b9c/ffffff?text=Health+care+Fraud+Detection&font=bebas&font_size=55"
     },
     {
-      title: "Data Analytics Platform",
+      title: "8-week-sql-coding-challenge",
       description: "Advanced analytics platform with real-time data processing and visualization.",
       tags: ["Python", "React", "PostgreSQL", "Redis"],
       links: {
-        github: "https://github.com/Subham-Maity/typescript-master",
+        github: "https://github.com/ajay-kumar2109/8-week-sql-coding-challenge",
       },
-      image: "https://via.placeholder.com/400x300/1e3a8a/ffffff?text=Analytics+Platform"
+      image: "https://fakeimg.pl/600x400/041317/ffffff?text=8+week+sql&font=bebas&font_size=55"
     },
     {
-      title: "Blockchain Explorer",
+      title: "Credit_Card_Report_Analysis",
       description: "Comprehensive blockchain explorer with transaction tracking and smart contract analysis.",
-      tags: ["Solidity", "React", "Node.js", "Web3.js"],
       links: {
-        github: "https://github.com/Subham-Maity/docker-master",
+        github: "https://github.com/ajay-kumar2109/Credit_Card_Report_Analysis",
       },
-      image: "https://via.placeholder.com/400x300/3730a3/ffffff?text=Blockchain+Explorer"
+      image: "https://fakeimg.pl/600x400/454682/ffffff?text=Credit+Card&font=bebas"
     },
     {
-      title: "AI Code Assistant",
+      title: "Toronto-real-estate Analysis",
       description: "Intelligent code completion and suggestion system using machine learning.",
-      tags: ["Python", "TensorFlow", "NLP", "FastAPI"],
       links: {
-        github: "https://github.com/Subham-Maity/ml-master",
+        github: "https://github.com/ajay-kumar2109/Toronto-real-estate",
       },
-      image: "https://via.placeholder.com/400x300/831843/ffffff?text=AI+Code+Assistant"
+      image: "https://fakeimg.pl/600x400/32636e/ffffff?text=Toronto-real-estate&font=bebas&font_size=55"
     }
   ];
 
