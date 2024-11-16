@@ -28,6 +28,7 @@ const Projects = () => {
     {
       title: "healthcare-provider-fraud-detection",
       description: "Automated CI/CD pipeline tool with custom workflows and cloud integrations.",
+      tags: [],
       links: {
         github: "https://github.com/ajay-kumar2109/healthcare-provider-fraud-detection",
       },
@@ -36,7 +37,7 @@ const Projects = () => {
     {
       title: "8-week-sql-coding-challenge",
       description: "Advanced analytics platform with real-time data processing and visualization.",
-      tags: ["Python", "React", "PostgreSQL", "Redis"],
+      tags: ["PostgreSQL"],
       links: {
         github: "https://github.com/ajay-kumar2109/8-week-sql-coding-challenge",
       },
@@ -45,6 +46,7 @@ const Projects = () => {
     {
       title: "Credit_Card_Report_Analysis",
       description: "Comprehensive blockchain explorer with transaction tracking and smart contract analysis.",
+      tags: [],
       links: {
         github: "https://github.com/ajay-kumar2109/Credit_Card_Report_Analysis",
       },
@@ -53,6 +55,7 @@ const Projects = () => {
     {
       title: "Toronto-real-estate Analysis",
       description: "Intelligent code completion and suggestion system using machine learning.",
+      tags: [],
       links: {
         github: "https://github.com/ajay-kumar2109/Toronto-real-estate",
       },
