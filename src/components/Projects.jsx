@@ -8,13 +8,13 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "ETL Pipeline Dashboard",
+      title: "Retail Sales",
       description: "Real-time dashboard for monitoring ETL processes with live data streaming and interactive visualizations.",
       tags: ["React", "Node.js", "Apache Kafka", "D3.js"],
       links: {
-        github: "https://github.com/Subham-Maity/restock",
+        github: "https://github.com/ajay-kumar2109/retailSales",
       },
-      image: "https://via.placeholder.com/400x300/1a365d/ffffff?text=ETL+Dashboard"
+      image: "https://fakeimg.pl/600x400/408b9c/ffffff?text=Retail+Sales&font=bebas&font_size=55"
     },
     {
       title: "ML Model Platform",
