@@ -17,13 +17,13 @@ const Projects = () => {
       image: "https://fakeimg.pl/600x400/408b9c/ffffff?text=Retail+Sales&font=bebas&font_size=55"
     },
     {
-      title: "ML Model Platform",
-      description: "End-to-end machine learning model deployment platform with automated training and monitoring.",
-      tags: ["Python", "TensorFlow", "FastAPI", "Docker"],
+      title: "Amazon Sales Analysis",
+      description: "The "Amazon Sales Analysis" project is a Python-based data analysis endeavor aimed at exploring and understanding sales data obtained from Amazon. ",
+      tags: [],
       links: {
-        github: "https://github.com/Subham-Maity/python-master",
+        github: "https://github.com/ajay-kumar2109/Sales_Analysis_Amazon",
       },
-      image: "https://via.placeholder.com/400x300/44337a/ffffff?text=ML+Platform"
+      image: "https://fakeimg.pl/600x400/c73434/241313?text=Amazon+Sales+Analysis&font=noto-serif&font_size=52"
     },
     {
       title: "healthcare-provider-fraud-detection",
