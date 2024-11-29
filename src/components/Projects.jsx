@@ -18,7 +18,7 @@ const Projects = () => {
     },
     {
       title: "Amazon Sales Analysis",
-      description: "The "Amazon Sales Analysis" project is a Python-based data analysis endeavor aimed at exploring and understanding sales data obtained from Amazon. ",
+      description: "The Amazon Sales Analysis project is a Python-based data analysis endeavor aimed at exploring and understanding sales data obtained from Amazon. ",
       tags: [],
       links: {
         github: "https://github.com/ajay-kumar2109/Sales_Analysis_Amazon",
