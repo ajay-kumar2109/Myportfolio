@@ -22,7 +22,7 @@ const Employment = () => {
       }
     },
     {
-      title: "Data Engineer & ML Developer",
+      title: "Data Analyst & ML Developer",
       company: "iLink Digital",
       period: "January 2022 - December 2022",
       location: "India",
@@ -43,9 +43,9 @@ const Employment = () => {
       }
     },
     {
-      title: "Full-stack Developer",
+      title: "Data Analyst",
       company: "Cognizant",
-      period: "November 2020 - December 2022",
+      period: "November 2020 - January 2022",
       location: "Chennai, Tamil Nadu, India",
       type: "data", // Added for icon
       achievements: [
@@ -63,9 +63,9 @@ const Employment = () => {
       }
     },
     {
-      title: "Software Developer",
-      company: "Essen Electronic Systems Pvt Ltd",
-      period: "July 2018 - August 2019",
+      title: "Data Analyst",
+      company: "Wipro",
+      period: "December 2018 - September 2019",
       location: "India",
       type: "cloud", // Added for icon
       achievements: [
