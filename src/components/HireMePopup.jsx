@@ -18,7 +18,7 @@ const HireMePopup = () => {
     }, 20000);
 
     // Repeat every 20 seconds
-    const interval = setInterval(showPopup, 20000);
+    const interval = setInterval(showPopup, 50000);
 
     return () => {
       clearTimeout(initialTimeout);
