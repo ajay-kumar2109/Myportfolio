@@ -7,6 +7,15 @@ const Projects = () => {
   const projectsRef = useRef(null);
 
   const projects = [
+        {
+      title: "Movielytics Data Engineering Projects",
+      description: "The aim of this project, is to perform Extract, Transform, Load, on movies data, to answer questions the business may have about its users",
+      tags: ["Kaggle", "Amazon Ec2", "Apache Airflow", "Amazon Redshift"],
+      links: {
+        github: "https://github.com/ajay-kumar2109/movielytics_dataEngineering_Full-project",
+      },
+      image: "https://fakeimg.pl/600x400/302222/f0ebeb?text=MovieLytics+DataEngineering+Full+Project&font=bebas&font_size=35"
+    },
     {
       title: "Retail Sales",
       description: "Real-time dashboard for monitoring ETL processes with live data streaming and interactive visualizations.",
