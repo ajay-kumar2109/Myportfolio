@@ -114,7 +114,7 @@ const Hero = () => {
             <div className="flex items-center justify-center gap-4 flex-wrap">
               <span>Data Engineer</span>
               <span>💻</span>
-              <span>Full Stack Developer</span>
+              <span>Data Analyst</span>
               <span>⚡</span>
               <span>AI/ML Engineer</span>
               <span>🧠</span>
