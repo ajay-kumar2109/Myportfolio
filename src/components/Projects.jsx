@@ -9,8 +9,7 @@ const Projects = () => {
   const projects = [
     {
       title: "Tableau Dashboards",
-      description: "I created Tableau dashboards to analyze: 1. Employee Trends (attrition, demographics, engagement) 2. Automotive Sales (pricing, mileage, inventory patterns)
-                    3. Call Center Performance (volume, response times, customer sentiment) ",
+      description: "I created Tableau dashboards to analyze: 1. Employee Trends 2. Automotive Sales 3. Call Center Performance",
       tags: ["Tableau"],
       links: {
         github: "https://github.com/ajay-kumar2109/Employeedashboard",
