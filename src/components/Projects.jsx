@@ -7,6 +7,16 @@ const Projects = () => {
   const projectsRef = useRef(null);
 
   const projects = [
+    {
+      title: "Tableau Dashboards",
+      description: "I created Tableau dashboards to analyze: 1. Employee Trends (attrition, demographics, engagement) 2. Automotive Sales (pricing, mileage, inventory patterns)
+                    3. Call Center Performance (volume, response times, customer sentiment) ",
+      tags: ["Tableau"],
+      links: {
+        github: "https://github.com/ajay-kumar2109/Employeedashboard",
+      },
+      image: "https://fakeimg.pl/600x400/6e0808/ffffff?text=Tableau+Dashboards&font_size=64"
+    },
         {
       title: "Movielytics Data Engineering Projects",
       description: "The aim of this project, is to perform Extract, Transform, Load, on movies data, to answer questions the business may have about its users",
