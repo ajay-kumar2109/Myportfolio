@@ -7,6 +7,15 @@ const Projects = () => {
   const projectsRef = useRef(null);
 
   const projects = [
+        {
+      title: "MLOps Pipeline using Apache Airflow: Overview",
+      description: "The goal of this pipeline is to streamline the process of analyzing screentime data by automating its preprocessing and utilizing machine learning to predict app usage.",
+      tags: ["Apache Airflow"],
+      links: {
+        github: "https://github.com/ajay-kumar2109/MLOps-Pipeline-using-Apache-Airflow/tree/main?tab=readme-ov-file#overview",
+      },
+      image: "https://fakeimg.pl/600x400/456343/fffcfc?text=MLOps+Pipeline+using+Apache+Airflow&font_size=40"
+    },
     {
       title: "Tableau Dashboards",
       description: "I created Tableau dashboards to analyze: 1. Employee Trends 2. Automotive Sales 3. Call Center Performance",
