@@ -2,16 +2,16 @@ import { motion } from "framer-motion";
 
 const certifications = [
   {
-    title: "AWS Certified Solutions Architect",
+    name: "AWS Certified Solutions Architect",
     image: "/certificates/aws_solution.png",
   },
   {
-    title: "Google Data Analytics Certificate",
-    image: "https://fakeimg.pl/400x400/ff5733/ffffff?text=Google+Badge",
+    name: "Google Data Analytics Certificate",
+    image: "/certificates/aws_solution.png",
   },
   {
-    title: "Microsoft Azure Fundamentals",
-    image: "https://fakeimg.pl/400x400/654321/ffffff?text=Azure+Badge",
+    name: "Microsoft Azure Fundamentals",
+    image: "/your-uploaded-image-path/azure-badge.png",
   },
 ];
 
@@ -28,27 +28,26 @@ const Certifications = () => {
           Certifications
         </motion.h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {certifications.map((cert, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white rounded-3xl shadow-xl p-8 flex flex-col items-center"
+              className="bg-white rounded-2xl shadow-xl p-6 flex flex-col items-center transform hover:scale-105 transition-transform duration-300"
             >
-              {/* Bigger Image */}
-              <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 flex items-center justify-center">
+              {/* Fixing PNG size using max-width & aspect ratio */}
+              <div className="w-40 h-40 flex items-center justify-center">
                 <img
                   src={cert.image}
-                  alt={cert.title}
-                  className="w-full h-full object-contain"
+                  alt={cert.name}
+                  className="max-w-full max-h-full object-contain"
                 />
               </div>
 
-              {/* Certification Title */}
-              <h3 className="text-xl font-semibold text-gray-800 mt-6 text-center">
-                {cert.title}
+              <h3 className="text-xl font-semibold text-gray-800 mt-4 text-center">
+                {cert.name}
               </h3>
             </motion.div>
           ))}
