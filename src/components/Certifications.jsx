@@ -7,11 +7,11 @@ const certifications = [
   },
   {
     title: "Google Data Analytics Certificate",
-    image: "https://fakeimg.pl/300x300/ff5733/ffffff?text=Google+Badge",
+    image: "https://fakeimg.pl/400x400/ff5733/ffffff?text=Google+Badge",
   },
   {
     title: "Microsoft Azure Fundamentals",
-    image: "https://fakeimg.pl/300x300/654321/ffffff?text=Azure+Badge",
+    image: "https://fakeimg.pl/400x400/654321/ffffff?text=Azure+Badge",
   },
 ];
 
@@ -19,7 +19,6 @@ const Certifications = () => {
   return (
     <section id="certifications" className="py-16 bg-gray-100">
       <div className="max-w-6xl mx-auto px-6">
-        {/* Section Title */}
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -29,7 +28,6 @@ const Certifications = () => {
           Certifications
         </motion.h2>
 
-        {/* Certification Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {certifications.map((cert, index) => (
             <motion.div
@@ -37,10 +35,10 @@ const Certifications = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white rounded-3xl shadow-lg p-6 flex flex-col items-center"
+              className="bg-white rounded-3xl shadow-xl p-8 flex flex-col items-center"
             >
-              {/* Certification Badge */}
-              <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 flex items-center justify-center">
+              {/* Bigger Image */}
+              <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 flex items-center justify-center">
                 <img
                   src={cert.image}
                   alt={cert.title}
@@ -49,7 +47,7 @@ const Certifications = () => {
               </div>
 
               {/* Certification Title */}
-              <h3 className="text-lg font-semibold text-gray-800 mt-4 text-center">
+              <h3 className="text-xl font-semibold text-gray-800 mt-6 text-center">
                 {cert.title}
               </h3>
             </motion.div>
