@@ -6,31 +6,19 @@ const projects = [
     title: "Sales Performance Dashboard",
     image: "https://fakeimg.pl/900x500/123456/ffffff?text=Sales+Dashboard",
     description: "Interactive dashboard analyzing sales trends and performance metrics.",
+    url: "https://your-project-link.com/sales-dashboard",
   },
   {
     title: "Customer Segmentation Analysis",
     image: "https://fakeimg.pl/900x500/654321/ffffff?text=Customer+Segmentation",
     description: "Data-driven insights into customer behavior using clustering techniques.",
+    url: "https://your-project-link.com/customer-segmentation",
   },
   {
     title: "Financial Forecasting Model",
     image: "https://fakeimg.pl/900x500/ff5733/ffffff?text=Financial+Forecasting",
     description: "Predictive analytics model for financial trends and budget planning.",
-  },
-  {
-    title: "Marketing Campaign Insights",
-    image: "https://fakeimg.pl/900x500/2e8b57/ffffff?text=Marketing+Insights",
-    description: "Visual analysis of marketing campaigns and conversion rates.",
-  },
-  {
-    title: "Website Traffic Analysis",
-    image: "https://fakeimg.pl/900x500/008b8b/ffffff?text=Website+Traffic",
-    description: "Real-time analytics for tracking user engagement on websites.",
-  },
-  {
-    title: "Supply Chain Optimization",
-    image: "https://fakeimg.pl/900x500/ffcc00/ffffff?text=Supply+Chain+Optimization",
-    description: "Data visualization for supply chain efficiency and logistics improvement.",
+    url: "https://your-project-link.com/financial-forecasting",
   },
 ];
 
@@ -53,28 +41,36 @@ const Projects = () => {
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {projects.slice(0, visibleCount).map((project, index) => (
-            <motion.div
+            <motion.a
               key={index}
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-gray-100 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-transform transform hover:scale-105"
+              className="group relative bg-gray-100 rounded-2xl shadow-lg overflow-hidden 
+                        hover:shadow-xl transition-transform transform hover:scale-105"
             >
-              {/* Enlarged Image Section */}
-              <div className="relative w-full h-[400px]">
+              {/* Full Image Visibility */}
+              <div className="relative w-full h-auto">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover rounded-t-2xl"
+                  className="w-full h-auto object-contain rounded-2xl"
                 />
               </div>
 
-              {/* Project Details */}
-              <div className="p-6">
-                <h3 className="text-2xl font-semibold text-gray-800">{project.title}</h3>
-                <p className="text-gray-600 mt-2">{project.description}</p>
+              {/* Hover Overlay */}
+              <div className="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 
+                              flex flex-col items-center justify-center text-center px-6 transition-opacity duration-300">
+                <h3 className="text-2xl font-semibold text-white">{project.title}</h3>
+                <p className="text-gray-200 mt-2">{project.description}</p>
+                <span className="mt-4 px-4 py-2 bg-blue-500 text-white text-sm rounded-lg">
+                  View Project
+                </span>
               </div>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
 
