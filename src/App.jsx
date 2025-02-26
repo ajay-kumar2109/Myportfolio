@@ -19,7 +19,7 @@ function App() {
           <Hero />
         </div>
         <div id="about">
-          <About />
+          <Projects />
         </div>
         <div id="skills">
           <Skills />
