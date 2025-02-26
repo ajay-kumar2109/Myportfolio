@@ -1,6 +1,42 @@
 import { useState } from "react";
 
 const projectsData = [
+      {
+      title: "FMCG Mart Supply Chain Analysis",
+      description: "This is end-to-end project of Supply Chain in Fast-Moving Consumer Goods(FMCG) domain, in which a real business problem is solved and provided useful insights on an interactive dashboard to the stakeholders using Power BI.",
+      tags: ["PowerBI"],
+      links: {
+        github: "https://github.com/ajay-kumar2109/FMCG-Mart-Supply-Chain-Analysis",
+      },
+      image: "/certificates/mart.png"
+    },
+      {
+      title: "Amazon Sales Analysis",
+      description: "The Amazon Sales Analysis project is a Python-based data analysis endeavor aimed at exploring and understanding sales data obtained from Amazon. ",
+      tags: [],
+      links: {
+        github: "https://github.com/ajay-kumar2109/Sales_Analysis_Amazon",
+      },
+      image: "/certificates/amazon.png"
+    },
+      {
+      title: "Retail Sales",
+      description: "Real-time dashboard for monitoring ETL processes with live data streaming and interactive visualizations.",
+      tags: ["React", "Node.js", "Apache Kafka", "D3.js"],
+      links: {
+        github: "https://github.com/ajay-kumar2109/retailSales",
+      },
+      image: "/certificates/sales1.png"
+    },
+        {
+      title: "Supply Chain Analysis Using PowerBI",
+      description: "Conducted a comprehensive analysis of supply chain and shipment trends from 2015 to 2018, Including Customer Insights, Shipping Efficiency, Sales Composition and Geographic Analysis.",
+      tags: ["PowerBI"],
+      links: {
+        github: "https://github.com/ajay-kumar2109/Supply_Chain_Analysis-Using-PowerBI",
+      },
+      image: "/certificates/supplychain.png"
+    },
   {
       title: "MLOps Pipeline using Apache Airflow: Overview",
       description: "The goal of this pipeline is to streamline the process of analyzing screentime data by automating its preprocessing and utilizing machine learning to predict app usage.",
@@ -38,15 +74,6 @@ const projectsData = [
       image: "/certificates/sales1.png"
     },
     {
-      title: "Amazon Sales Analysis",
-      description: "The Amazon Sales Analysis project is a Python-based data analysis endeavor aimed at exploring and understanding sales data obtained from Amazon. ",
-      tags: [],
-      links: {
-        github: "https://github.com/ajay-kumar2109/Sales_Analysis_Amazon",
-      },
-      image: "/certificates/amazon.png"
-    },
-    {
       title: "healthcare-provider-fraud-detection",
       description: "Automated CI/CD pipeline tool with custom workflows and cloud integrations.",
       tags: [],
@@ -62,7 +89,7 @@ const projectsData = [
       links: {
         github: "https://github.com/ajay-kumar2109/8-week-sql-coding-challenge",
       },
-      image: "https://fakeimg.pl/600x400/041317/ffffff?text=8+week+sql&font=bebas&font_size=55"
+      image: "/certificates/sql.png"
     },
     {
       title: "Credit_Card_Report_Analysis",
@@ -71,7 +98,7 @@ const projectsData = [
       links: {
         github: "https://github.com/ajay-kumar2109/Credit_Card_Report_Analysis",
       },
-      image: "https://fakeimg.pl/600x400/454682/ffffff?text=Credit+Card&font=bebas"
+      image: "/certificates/cc.png"
     },
     {
       title: "Toronto-real-estate Analysis",
@@ -80,7 +107,7 @@ const projectsData = [
       links: {
         github: "https://github.com/ajay-kumar2109/Toronto-real-estate",
       },
-      image: "https://fakeimg.pl/600x400/32636e/ffffff?text=Toronto-real-estate&font=bebas&font_size=55"
+      image: "/certificates/toronto.png"
     }
   // Add more projects here
 ];
