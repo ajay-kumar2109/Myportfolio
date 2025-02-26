@@ -13,6 +13,18 @@ const certifications = [
     name: "Microsoft Azure Fundamentals",
     image: "/your-uploaded-image-path/azure-badge.png",
   },
+    {
+    name: "AWS Certified Solutions Architect",
+    image: "/certificates/aws_solution.png",
+  },
+  {
+    name: "Google Data Analytics Certificate",
+    image: "/certificates/image.png",
+  },
+  {
+    name: "Microsoft Azure Fundamentals",
+    image: "/your-uploaded-image-path/azure-badge.png",
+  },
 ];
 
 const Certifications = () => {
