@@ -4,7 +4,7 @@ const Certifications = () => {
   const certifications = [
     {
       name: "AWS Certified Solutions Architect",
-      image: "/certificates/aws-cert.png", // Place images in the public/certificates folder
+      image: "/certificates/aws_solution.png", // Place images in the public/certificates folder
     },
     {
       name: "Google Data Analytics Certificate",
