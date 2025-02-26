@@ -1,111 +1,81 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
 
-const allProjects = [
+const projectsData = [
   {
-    name: "Sales Dashboard",
-    image: "/your-uploaded-path/sales-dashboard.png",
-    description: "A Power BI dashboard for analyzing sales performance trends and revenue insights.",
-    url: "https://your-project-link.com",
+    title: "MLOps Pipeline using Apache Airflow",
+    description:
+      "The goal of this pipeline is to streamline the process of analyzing screentime data by automating its preprocessing and utilizing machine learning to predict app usage.",
+    tags: ["Apache Airflow"],
+    links: {
+      github:
+        "https://github.com/ajay-kumar2109/MLOps-Pipeline-using-Apache-Airflow/tree/main?tab=readme-ov-file#overview",
+    },
+    image: "/certificates/airflow.png",
   },
   {
-    name: "Customer Insights Dashboard",
-    image: "/your-uploaded-path/customer-insights.png",
-    description: "An interactive analytics tool to track customer behavior and improve engagement strategies.",
-    url: "https://your-project-link.com",
+    title: "Data Visualization Dashboard",
+    description:
+      "An interactive Power BI dashboard that provides insights into sales performance, customer segmentation, and revenue trends.",
+    tags: ["Power BI", "Data Analysis"],
+    links: {
+      github: "https://github.com/yourusername/data-viz-dashboard",
+    },
+    image: "/certificates/dataviz.png",
   },
   {
-    name: "Financial Report",
-    image: "/your-uploaded-path/financial-report.png",
-    description: "A real-time financial analytics dashboard with budgeting and forecasting tools.",
-    url: "https://your-project-link.com",
+    title: "E-commerce Recommendation System",
+    description:
+      "A machine learning-based recommendation system that suggests products based on user browsing and purchase history.",
+    tags: ["Machine Learning", "Python"],
+    links: {
+      github: "https://github.com/yourusername/ecommerce-recommendation",
+    },
+    image: "/certificates/recommendation.png",
   },
-  {
-    name: "Marketing Performance Tracker",
-    image: "/your-uploaded-path/marketing-tracker.png",
-    description: "A visual dashboard tracking marketing campaign performance across multiple channels.",
-    url: "https://your-project-link.com",
-  },
-  {
-    name: "E-commerce Sales Analysis",
-    image: "/your-uploaded-path/ecommerce-sales.png",
-    description: "An advanced dashboard analyzing e-commerce sales and customer trends.",
-    url: "https://your-project-link.com",
-  },
-  {
-    name: "Employee Productivity Tracker",
-    image: "/your-uploaded-path/employee-productivity.png",
-    description: "A performance dashboard that tracks employee efficiency and KPIs.",
-    url: "https://your-project-link.com",
-  },
+  // Add more projects here
 ];
 
 const Projects = () => {
-  const [visibleProjects, setVisibleProjects] = useState(4); // Show only 4 projects initially
-
-  const loadMoreProjects = () => {
-    setVisibleProjects((prev) => prev + 2); // Load 2 more projects on click
-  };
+  const [visibleProjects, setVisibleProjects] = useState(4);
 
   return (
-    <section id="projects" className="py-16 bg-white">
-      <div className="max-w-6xl mx-auto px-6">
-        <motion.h2
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-4xl font-bold text-gray-900 text-center mb-12"
-        >
-          Featured Projects
-        </motion.h2>
-
-        {/* Project Grid - 2 per row */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          {allProjects.slice(0, visibleProjects).map((project, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="flex flex-col items-center text-center"
+    <div className="bg-white py-10 px-5">
+      <h2 className="text-3xl font-bold text-center mb-8">Projects</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+        {projectsData.slice(0, visibleProjects).map((project, index) => (
+          <div
+            key={index}
+            className="bg-gray-100 p-4 rounded-2xl shadow-md transition-transform transform hover:scale-[1.02]"
+          >
+            <img
+              src={project.image}
+              alt={project.title}
+              className="w-full h-60 object-contain rounded-lg"
+            />
+            <h3 className="text-xl font-semibold mt-4">{project.title}</h3>
+            <p className="text-gray-600 mt-2">{project.description}</p>
+            <a
+              href={project.links.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 font-semibold mt-3 inline-block"
             >
-              {/* Image Section */}
-              <div className="w-full h-80 flex items-center justify-center bg-gray-200 rounded-3xl shadow-lg overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.name}
-                  className="max-w-full h-full object-contain p-4"
-                />
-              </div>
-
-              {/* Project Details Below Image */}
-              <h3 className="text-2xl font-semibold text-gray-900 mt-4">{project.name}</h3>
-              <p className="text-gray-600 mt-2">{project.description}</p>
-              <a
-                href={project.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-2 inline-block text-lg font-medium text-blue-600 hover:text-blue-800 transition"
-              >
-                View Project →
-              </a>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Load More Button */}
-        {visibleProjects < allProjects.length && (
-          <div className="text-center mt-8">
-            <button
-              onClick={loadMoreProjects}
-              className="bg-blue-600 text-white px-6 py-3 rounded-xl text-lg font-semibold hover:bg-blue-700 transition"
-            >
-              Load More Projects ↓
-            </button>
+              View Project →
+            </a>
           </div>
-        )}
+        ))}
       </div>
-    </section>
+      {visibleProjects < projectsData.length && (
+        <div className="text-center mt-6">
+          <button
+            onClick={() => setVisibleProjects((prev) => prev + 4)}
+            className="px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition"
+          >
+            Load More
+          </button>
+        </div>
+      )}
+    </div>
   );
 };
 
