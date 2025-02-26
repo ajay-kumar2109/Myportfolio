@@ -1,105 +1,55 @@
-import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-const projects = [
+const certifications = [
   {
-    title: "Sales Dashboard",
-    image: "https://fakeimg.pl/600x400/123456/ffffff?text=Sales+Dashboard",
-    description: "An interactive Power BI dashboard analyzing sales performance.",
-    link: "https://example.com/sales-dashboard",
+    title: "AWS Certified Solutions Architect",
+    image: "/certificates/aws_solution.png",
   },
   {
-    title: "Customer Retention Analysis",
-    image: "https://fakeimg.pl/600x400/654321/ffffff?text=Customer+Retention",
-    description: "A data-driven project showcasing retention trends over time.",
-    link: "https://example.com/customer-retention",
+    title: "Google Data Analytics Certificate",
+    image: "https://fakeimg.pl/400x400/ff5733/ffffff?text=Google+Badge",
   },
   {
-    title: "Website Traffic Report",
-    image: "https://fakeimg.pl/600x400/ff5733/ffffff?text=Website+Traffic",
-    description: "Web analytics dashboard tracking visitor behavior and sources.",
-    link: "https://example.com/traffic-report",
+    title: "Microsoft Azure Fundamentals",
+    image: "https://fakeimg.pl/400x400/654321/ffffff?text=Azure+Badge",
   },
 ];
 
-const Projects = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
+const Certifications = () => {
   return (
-    <section id="projects" className="py-16 bg-gray-900">
+    <section id="certifications" className="py-16 bg-gray-100">
       <div className="max-w-6xl mx-auto px-6">
-        {/* Section Title */}
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-4xl font-bold text-white text-center mb-10"
+          className="text-4xl font-bold text-gray-900 text-center mb-10"
         >
-          Projects
+          Certifications
         </motion.h2>
 
-        {/* Project Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          {certifications.map((cert, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative bg-gray-800 rounded-3xl shadow-xl p-6"
+              className="bg-white rounded-3xl shadow-xl p-8 flex flex-col items-center"
             >
-              {/* Image with hover effect on desktop */}
-              <div className="overflow-hidden rounded-lg">
+              {/* Bigger Image */}
+              <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 flex items-center justify-center">
                 <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-64 object-cover rounded-lg transition-transform duration-300"
-                  style={{ objectFit: "contain" }} // Ensures no cropping
+                  src={cert.image}
+                  alt={cert.title}
+                  className="w-full h-full object-contain"
                 />
               </div>
 
-              {/* Mobile View: Description Below Image */}
-              {isMobile ? (
-                <div className="mt-4 text-center">
-                  <h3 className="text-lg font-semibold text-white">{project.title}</h3>
-                  <p className="text-gray-400 mt-2">{project.description}</p>
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block mt-3 text-blue-400 hover:underline"
-                  >
-                    View Project
-                  </a>
-                </div>
-              ) : (
-                // Desktop Hover Effect
-                <motion.div
-                  whileHover={{ opacity: 1 }}
-                  className="absolute inset-0 bg-black bg-opacity-80 flex flex-col items-center 
-                            justify-center text-white text-center opacity-0 transition-opacity duration-300"
-                >
-                  <h3 className="text-lg font-semibold">{project.title}</h3>
-                  <p className="mt-2">{project.description}</p>
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-3 text-blue-400 hover:underline"
-                  >
-                    View Project
-                  </a>
-                </motion.div>
-              )}
+              {/* Certification Title */}
+              <h3 className="text-xl font-semibold text-gray-800 mt-6 text-center">
+                {cert.title}
+              </h3>
             </motion.div>
           ))}
         </div>
@@ -108,4 +58,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default Certifications;
