@@ -10,8 +10,8 @@ const certifications = [
     image: "/certificates/microsoftazure.png",
   },
   {
-    name: "Microsoft Azure Fundamentals",
-    image: "/your-uploaded-image-path/azure-badge.png",
+    name: "AWS Machine Learning",
+    image: "/your-uploaded-image-path/ml.png",
   },
 ];
 
