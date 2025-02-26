@@ -1,30 +1,52 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-const projects = [
+const allProjects = [
   {
     name: "Sales Dashboard",
     image: "/your-uploaded-path/sales-dashboard.png",
-    description: "A Power BI dashboard for analyzing sales performance.",
+    description: "A Power BI dashboard for analyzing sales performance trends and revenue insights.",
     url: "https://your-project-link.com",
   },
   {
     name: "Customer Insights Dashboard",
     image: "/your-uploaded-path/customer-insights.png",
-    description: "An interactive dashboard to track customer behavior.",
+    description: "An interactive analytics tool to track customer behavior and improve engagement strategies.",
     url: "https://your-project-link.com",
   },
   {
     name: "Financial Report",
     image: "/your-uploaded-path/financial-report.png",
-    description: "A detailed financial analytics dashboard.",
+    description: "A real-time financial analytics dashboard with budgeting and forecasting tools.",
+    url: "https://your-project-link.com",
+  },
+  {
+    name: "Marketing Performance Tracker",
+    image: "/your-uploaded-path/marketing-tracker.png",
+    description: "A visual dashboard tracking marketing campaign performance across multiple channels.",
+    url: "https://your-project-link.com",
+  },
+  {
+    name: "E-commerce Sales Analysis",
+    image: "/your-uploaded-path/ecommerce-sales.png",
+    description: "An advanced dashboard analyzing e-commerce sales and customer trends.",
+    url: "https://your-project-link.com",
+  },
+  {
+    name: "Employee Productivity Tracker",
+    image: "/your-uploaded-path/employee-productivity.png",
+    description: "A performance dashboard that tracks employee efficiency and KPIs.",
     url: "https://your-project-link.com",
   },
 ];
 
 const Projects = () => {
-  const [visibleProjects, setVisibleProjects] = useState(3);
-  
+  const [visibleProjects, setVisibleProjects] = useState(4); // Show only 4 projects initially
+
+  const loadMoreProjects = () => {
+    setVisibleProjects((prev) => prev + 2); // Load 2 more projects on click
+  };
+
   return (
     <section id="projects" className="py-16 bg-white">
       <div className="max-w-6xl mx-auto px-6">
@@ -32,53 +54,41 @@ const Projects = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-4xl font-bold text-gray-900 text-center mb-10"
+          className="text-4xl font-bold text-gray-900 text-center mb-12"
         >
-          My Projects
+          Featured Projects
         </motion.h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-          {projects.slice(0, visibleProjects).map((project, index) => (
+        {/* Project Grid - 2 per row */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          {allProjects.slice(0, visibleProjects).map((project, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative bg-gray-100 rounded-2xl shadow-xl p-4 flex flex-col items-center transition-transform transform hover:scale-105"
+              className="bg-white shadow-lg rounded-3xl overflow-hidden transform transition-all hover:scale-105"
             >
-              {/* Fixing image size so all thumbnails remain consistent */}
-              <div className="w-full h-60 overflow-hidden flex items-center justify-center">
+              {/* Image Section */}
+              <div className="w-full h-80 flex items-center justify-center bg-gray-200">
                 <img
                   src={project.image}
                   alt={project.name}
-                  className="w-full h-full object-cover"
+                  className="max-w-full h-full object-contain p-4"
                 />
               </div>
 
-              {/* Hover Effect for Desktop */}
-              <div className="hidden md:flex absolute inset-0 bg-white opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-center p-4">
-                <p className="text-gray-900 font-medium">{project.description}</p>
+              {/* Project Details */}
+              <div className="p-6 text-center">
+                <h3 className="text-2xl font-semibold text-gray-900">{project.name}</h3>
+                <p className="text-gray-600 mt-2">{project.description}</p>
                 <a
                   href={project.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-2 text-blue-600 underline"
+                  className="mt-4 inline-block text-lg font-medium text-blue-600 hover:text-blue-800 transition"
                 >
-                  View Project
-                </a>
-              </div>
-
-              {/* Project name and URL always visible on mobile */}
-              <div className="md:hidden text-center mt-4">
-                <h3 className="text-xl font-semibold text-gray-900">{project.name}</h3>
-                <p className="text-gray-600">{project.description}</p>
-                <a
-                  href={project.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 underline mt-1 block"
-                >
-                  View Project
+                  View Project →
                 </a>
               </div>
             </motion.div>
@@ -86,13 +96,13 @@ const Projects = () => {
         </div>
 
         {/* Load More Button */}
-        {visibleProjects < projects.length && (
+        {visibleProjects < allProjects.length && (
           <div className="text-center mt-8">
             <button
-              onClick={() => setVisibleProjects((prev) => prev + 3)}
-              className="px-6 py-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition"
+              onClick={loadMoreProjects}
+              className="bg-blue-600 text-white px-6 py-3 rounded-xl text-lg font-semibold hover:bg-blue-700 transition"
             >
-              Load More
+              Load More Projects ↓
             </button>
           </div>
         )}
