@@ -1,19 +1,15 @@
-import { motion } from 'framer-motion';
-import { useState } from 'react';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { useState } from "react";
+import { motion } from "framer-motion";
 
-const Projects = () => {
-  const [visibleProjects, setVisibleProjects] = useState(4);
-  
-  const projects = [
-        {
+const allProjects = [
+    {
       title: "MLOps Pipeline using Apache Airflow: Overview",
       description: "The goal of this pipeline is to streamline the process of analyzing screentime data by automating its preprocessing and utilizing machine learning to predict app usage.",
       tags: ["Apache Airflow"],
       links: {
         github: "https://github.com/ajay-kumar2109/MLOps-Pipeline-using-Apache-Airflow/tree/main?tab=readme-ov-file#overview",
       },
-      image: "https://fakeimg.pl/600x400/456343/fffcfc?text=MLOps+Pipeline+using+Apache+Airflow&font_size=40"
+      image: "/certificates/airflow.png"
     },
     {
       title: "Tableau Dashboards",
@@ -22,7 +18,7 @@ const Projects = () => {
       links: {
         github: "https://github.com/ajay-kumar2109/Employeedashboard",
       },
-      image: "https://fakeimg.pl/600x400/6e0808/ffffff?text=Tableau+Dashboards&font_size=64"
+      image: "/certificates/dashboard.png"
     },
         {
       title: "Movielytics Data Engineering Projects",
@@ -31,7 +27,7 @@ const Projects = () => {
       links: {
         github: "https://github.com/ajay-kumar2109/movielytics_dataEngineering_Full-project",
       },
-      image: "https://fakeimg.pl/600x400/302222/f0ebeb?text=MovieLytics+DataEngineering+Full+Project&font=bebas&font_size=35"
+      image: "/certificates/movie.png"
     },
     {
       title: "Retail Sales",
@@ -40,7 +36,7 @@ const Projects = () => {
       links: {
         github: "https://github.com/ajay-kumar2109/retailSales",
       },
-      image: "https://fakeimg.pl/600x400/408b9c/ffffff?text=Retail+Sales&font=bebas&font_size=55"
+      image: "/certificates/sales1.png"
     },
     {
       title: "Amazon Sales Analysis",
@@ -49,7 +45,7 @@ const Projects = () => {
       links: {
         github: "https://github.com/ajay-kumar2109/Sales_Analysis_Amazon",
       },
-      image: "https://fakeimg.pl/600x400/c73434/241313?text=Amazon+Sales+Analysis&font=noto-serif&font_size=52"
+      image: "/certificates/amazon.png"
     },
     {
       title: "healthcare-provider-fraud-detection",
@@ -58,7 +54,7 @@ const Projects = () => {
       links: {
         github: "https://github.com/ajay-kumar2109/healthcare-provider-fraud-detection",
       },
-      image: "https://fakeimg.pl/600x400/408b9c/ffffff?text=Health+care+Fraud+Detection&font=bebas&font_size=55"
+      image: "/certificates/healthcare.png"
     },
     {
       title: "8-week-sql-coding-challenge",
@@ -87,41 +83,73 @@ const Projects = () => {
       },
       image: "https://fakeimg.pl/600x400/32636e/ffffff?text=Toronto-real-estate&font=bebas&font_size=55"
     }
-  ];
-  return (
-    <section className="py-16 bg-gray-100 min-h-screen">
-      <div className="max-w-6xl mx-auto px-6">
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-3">Featured Projects</h2>
-          <p className="text-md text-gray-600 max-w-2xl mx-auto">Here are some of my recent projects, showcasing technical skills and problem-solving abilities.</p>
-        </motion.div>
+];
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.slice(0, visibleProjects).map((project, index) => (
-            <motion.div key={index} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
-              <div className="h-48 overflow-hidden">
-                <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
+const Projects = () => {
+  const [visibleProjects, setVisibleProjects] = useState(4); // Show only 4 projects initially
+
+  const loadMoreProjects = () => {
+    setVisibleProjects((prev) => prev + 2); // Load 2 more projects on click
+  };
+
+  return (
+    <section id="projects" className="py-16 bg-white">
+      <div className="max-w-6xl mx-auto px-6">
+        <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-4xl font-bold text-gray-900 text-center mb-12"
+        >
+          Featured Projects
+        </motion.h2>
+
+        {/* Project Grid - 2 per row */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          {allProjects.slice(0, visibleProjects).map((project, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="bg-white shadow-lg rounded-3xl overflow-hidden transform transition-all hover:scale-105"
+            >
+              {/* Image Section */}
+              <div className="w-full h-80 flex items-center justify-center bg-gray-200">
+                <img
+                  src={project.image}
+                  alt={project.name}
+                  className="max-w-full h-full object-contain p-4"
+                />
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
-                <p className="text-sm text-gray-600 mb-4">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map((tag, idx) => (
-                    <span key={idx} className="px-2 py-1 bg-blue-100 text-blue-600 rounded-full text-xs font-medium">{tag}</span>
-                  ))}
-                </div>
-                <motion.a href={project.links.github} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-lg text-sm hover:bg-gray-800 transition">
-                  <FaGithub className="text-sm" /> View Code
-                </motion.a>
+
+              {/* Project Details */}
+              <div className="p-6 text-center">
+                <h3 className="text-2xl font-semibold text-gray-900">{project.name}</h3>
+                <p className="text-gray-600 mt-2">{project.description}</p>
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-block text-lg font-medium text-blue-600 hover:text-blue-800 transition"
+                >
+                  View Project →
+                </a>
               </div>
             </motion.div>
           ))}
         </div>
 
-        {visibleProjects < projects.length && (
-          <motion.div className="text-center mt-8">
-            <button onClick={() => setVisibleProjects(visibleProjects + 4)} className="px-6 py-3 bg-blue-500 text-white rounded-full text-sm font-medium hover:bg-blue-600 transition">Load More</button>
-          </motion.div>
+        {/* Load More Button */}
+        {visibleProjects < allProjects.length && (
+          <div className="text-center mt-8">
+            <button
+              onClick={loadMoreProjects}
+              className="bg-blue-600 text-white px-6 py-3 rounded-xl text-lg font-semibold hover:bg-blue-700 transition"
+            >
+              Load More Projects ↓
+            </button>
+          </div>
         )}
       </div>
     </section>
