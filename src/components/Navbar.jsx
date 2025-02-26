@@ -12,8 +12,7 @@ const Navbar = () => {
     { name: "Certifications", id: "Certifications", number: "02" },
     { name: "Skills", id: "skills", number: "03" },
     { name: "Experience", id: "employment", number: "04" },
-    { name: "Technical", id: "technical", number: "05" },
-    { name: "Contact", id: "contact", number: "06" }
+    { name: "Contact", id: "contact", number: "05" }
   ];
 
   useEffect(() => {
