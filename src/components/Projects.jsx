@@ -1,93 +1,108 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const projects = [
   {
-    title: "Sales Performance Dashboard",
-    image: "https://fakeimg.pl/900x500/123456/ffffff?text=Sales+Dashboard",
-    description: "Interactive dashboard analyzing sales trends and performance metrics.",
-    url: "https://your-project-link.com/sales-dashboard",
+    title: "Sales Dashboard",
+    image: "https://fakeimg.pl/600x400/123456/ffffff?text=Sales+Dashboard",
+    description: "An interactive Power BI dashboard analyzing sales performance.",
+    link: "https://example.com/sales-dashboard",
   },
   {
-    title: "Customer Segmentation Analysis",
-    image: "https://fakeimg.pl/900x500/654321/ffffff?text=Customer+Segmentation",
-    description: "Data-driven insights into customer behavior using clustering techniques.",
-    url: "https://your-project-link.com/customer-segmentation",
+    title: "Customer Retention Analysis",
+    image: "https://fakeimg.pl/600x400/654321/ffffff?text=Customer+Retention",
+    description: "A data-driven project showcasing retention trends over time.",
+    link: "https://example.com/customer-retention",
   },
   {
-    title: "Financial Forecasting Model",
-    image: "https://fakeimg.pl/900x500/ff5733/ffffff?text=Financial+Forecasting",
-    description: "Predictive analytics model for financial trends and budget planning.",
-    url: "https://your-project-link.com/financial-forecasting",
+    title: "Website Traffic Report",
+    image: "https://fakeimg.pl/600x400/ff5733/ffffff?text=Website+Traffic",
+    description: "Web analytics dashboard tracking visitor behavior and sources.",
+    link: "https://example.com/traffic-report",
   },
 ];
 
 const Projects = () => {
-  const [visibleCount, setVisibleCount] = useState(3);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
-    <section id="projects" className="py-16 bg-white">
+    <section id="projects" className="py-16 bg-gray-900">
       <div className="max-w-6xl mx-auto px-6">
         {/* Section Title */}
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-4xl font-bold text-gray-900 text-center mb-10"
+          className="text-4xl font-bold text-white text-center mb-10"
         >
           Projects
         </motion.h2>
 
-        {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          {projects.slice(0, visibleCount).map((project, index) => (
-            <motion.a
+        {/* Project Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project, index) => (
+            <motion.div
               key={index}
-              href={project.url}
-              target="_blank"
-              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative bg-gray-100 rounded-2xl shadow-lg overflow-hidden 
-                        hover:shadow-xl transition-transform transform hover:scale-105"
+              className="relative bg-gray-800 rounded-3xl shadow-xl p-6"
             >
-              {/* Full Image Visibility */}
-              <div className="relative w-full h-auto">
+              {/* Image with hover effect on desktop */}
+              <div className="overflow-hidden rounded-lg">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-auto object-contain rounded-2xl"
+                  className="w-full h-64 object-cover rounded-lg transition-transform duration-300"
+                  style={{ objectFit: "contain" }} // Ensures no cropping
                 />
               </div>
 
-              {/* Hover Overlay */}
-              <div className="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 
-                              flex flex-col items-center justify-center text-center px-6 transition-opacity duration-300">
-                <h3 className="text-2xl font-semibold text-white">{project.title}</h3>
-                <p className="text-gray-200 mt-2">{project.description}</p>
-                <span className="mt-4 px-4 py-2 bg-blue-500 text-white text-sm rounded-lg">
-                  View Project
-                </span>
-              </div>
-            </motion.a>
+              {/* Mobile View: Description Below Image */}
+              {isMobile ? (
+                <div className="mt-4 text-center">
+                  <h3 className="text-lg font-semibold text-white">{project.title}</h3>
+                  <p className="text-gray-400 mt-2">{project.description}</p>
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block mt-3 text-blue-400 hover:underline"
+                  >
+                    View Project
+                  </a>
+                </div>
+              ) : (
+                // Desktop Hover Effect
+                <motion.div
+                  whileHover={{ opacity: 1 }}
+                  className="absolute inset-0 bg-black bg-opacity-80 flex flex-col items-center 
+                            justify-center text-white text-center opacity-0 transition-opacity duration-300"
+                >
+                  <h3 className="text-lg font-semibold">{project.title}</h3>
+                  <p className="mt-2">{project.description}</p>
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 text-blue-400 hover:underline"
+                  >
+                    View Project
+                  </a>
+                </motion.div>
+              )}
+            </motion.div>
           ))}
         </div>
-
-        {/* Load More Button */}
-        {visibleCount < projects.length && (
-          <div className="text-center mt-12">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => setVisibleCount(projects.length)}
-              className="px-6 py-3 text-white bg-gradient-to-r from-blue-500 to-purple-500 
-                         rounded-full text-lg font-medium shadow-lg hover:shadow-xl transition"
-            >
-              Load More
-            </motion.button>
-          </div>
-        )}
       </div>
     </section>
   );
