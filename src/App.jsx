@@ -32,9 +32,6 @@ function App() {
         <div id="employment">
           <Employment />
         </div>
-        <div id="technical">
-          <Technical />
-        </div>
         <div id="contact">
           <Contact />
         </div>
