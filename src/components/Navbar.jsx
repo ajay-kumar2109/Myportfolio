@@ -8,11 +8,10 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { name: "About", id: "about", number: "01" },
+    { name: "Projects", id: "about", number: "01" },
     { name: "Skills", id: "skills", number: "02" },
     { name: "Experience", id: "employment", number: "03" },
-    { name: "Projects", id: "projects", number: "04" },
-    { name: "Technical", id: "technical", number: "05" },
+    { name: "Technical", id: "technical", number: "04" },
     { name: "Contact", id: "contact", number: "05" }
   ];
 
