@@ -11,7 +11,7 @@ const certifications = [
   },
   {
     name: "AWS Machine Learning",
-    image: "/your-uploaded-image-path/ml.png",
+    image: "/certificates/ml.png",
   },
 ];
 
