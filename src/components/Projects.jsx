@@ -1,40 +1,30 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-const projectsData = [
+const projects = [
   {
-    title: "Sales Dashboard",
-    image: "https://fakeimg.pl/600x400/3498db/ffffff?text=Sales+Dashboard",
-    description: "A Power BI dashboard displaying sales trends, revenue, and KPIs.",
-    url: "https://yourprojecturl.com",
+    name: "Sales Dashboard",
+    image: "/your-uploaded-path/sales-dashboard.png",
+    description: "A Power BI dashboard for analyzing sales performance.",
+    url: "https://your-project-link.com",
   },
   {
-    title: "Marketing Analytics",
-    image: "https://fakeimg.pl/600x400/2ecc71/ffffff?text=Marketing+Analytics",
-    description: "A Tableau dashboard analyzing marketing campaign performance.",
-    url: "https://yourprojecturl.com",
+    name: "Customer Insights Dashboard",
+    image: "/your-uploaded-path/customer-insights.png",
+    description: "An interactive dashboard to track customer behavior.",
+    url: "https://your-project-link.com",
   },
   {
-    title: "Customer Retention Insights",
-    image: "https://fakeimg.pl/600x400/e74c3c/ffffff?text=Retention+Insights",
-    description: "A Looker Studio dashboard tracking customer retention trends.",
-    url: "https://yourprojecturl.com",
-  },
-  {
-    title: "Website Traffic Analysis",
-    image: "https://fakeimg.pl/600x400/f1c40f/ffffff?text=Traffic+Analysis",
-    description: "A Google Analytics dashboard for monitoring website traffic.",
-    url: "https://yourprojecturl.com",
+    name: "Financial Report",
+    image: "/your-uploaded-path/financial-report.png",
+    description: "A detailed financial analytics dashboard.",
+    url: "https://your-project-link.com",
   },
 ];
 
 const Projects = () => {
-  const [visibleProjects, setVisibleProjects] = useState(2);
-
-  const loadMoreProjects = () => {
-    setVisibleProjects((prev) => prev + 2);
-  };
-
+  const [visibleProjects, setVisibleProjects] = useState(3);
+  
   return (
     <section id="projects" className="py-16 bg-white">
       <div className="max-w-6xl mx-auto px-6">
@@ -44,49 +34,49 @@ const Projects = () => {
           transition={{ duration: 0.5 }}
           className="text-4xl font-bold text-gray-900 text-center mb-10"
         >
-          Projects
+          My Projects
         </motion.h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
-          {projectsData.slice(0, visibleProjects).map((project, index) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+          {projects.slice(0, visibleProjects).map((project, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white rounded-2xl shadow-lg overflow-hidden"
+              className="relative bg-gray-100 rounded-2xl shadow-xl p-4 flex flex-col items-center transition-transform transform hover:scale-105"
             >
-              {/* Large Image with Hover Effect on Desktop */}
-              <div className="relative group">
+              {/* Fixing image size so all thumbnails remain consistent */}
+              <div className="w-full h-60 overflow-hidden flex items-center justify-center">
                 <img
                   src={project.image}
-                  alt={project.title}
-                  className="w-full h-64 object-cover"
+                  alt={project.name}
+                  className="w-full h-full object-cover"
                 />
-
-                {/* Hover Effect for Larger Screens */}
-                <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden sm:flex">
-                  <p className="text-white text-lg font-semibold px-4 text-center">{project.description}</p>
-                  <a
-                    href={project.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-4 bg-white text-gray-900 font-bold py-2 px-4 rounded-full"
-                  >
-                    View Project
-                  </a>
-                </div>
               </div>
 
-              {/* Mobile-Friendly Display (No Hover) */}
-              <div className="p-6 sm:hidden">
-                <h3 className="text-2xl font-bold text-gray-800">{project.title}</h3>
-                <p className="text-gray-600 mt-2">{project.description}</p>
+              {/* Hover Effect for Desktop */}
+              <div className="hidden md:flex absolute inset-0 bg-white opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-center p-4">
+                <p className="text-gray-900 font-medium">{project.description}</p>
                 <a
                   href={project.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-4 inline-block bg-gray-900 text-white font-bold py-2 px-4 rounded-full"
+                  className="mt-2 text-blue-600 underline"
+                >
+                  View Project
+                </a>
+              </div>
+
+              {/* Project name and URL always visible on mobile */}
+              <div className="md:hidden text-center mt-4">
+                <h3 className="text-xl font-semibold text-gray-900">{project.name}</h3>
+                <p className="text-gray-600">{project.description}</p>
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 underline mt-1 block"
                 >
                   View Project
                 </a>
@@ -96,11 +86,11 @@ const Projects = () => {
         </div>
 
         {/* Load More Button */}
-        {visibleProjects < projectsData.length && (
-          <div className="text-center mt-10">
+        {visibleProjects < projects.length && (
+          <div className="text-center mt-8">
             <button
-              onClick={loadMoreProjects}
-              className="bg-gray-900 text-white font-bold py-3 px-6 rounded-full hover:bg-gray-700 transition duration-300"
+              onClick={() => setVisibleProjects((prev) => prev + 3)}
+              className="px-6 py-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition"
             >
               Load More
             </button>
