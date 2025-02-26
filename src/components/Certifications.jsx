@@ -2,24 +2,12 @@ import { motion } from "framer-motion";
 
 const certifications = [
   {
-    name: "AWS Certified Solutions Architect",
-    image: "/certificates/aws_solution.png",
-  },
-  {
     name: "Google Data Analytics Certificate",
     image: "/certificates/image.png",
   },
   {
-    name: "Microsoft Azure Fundamentals",
-    image: "/your-uploaded-image-path/azure-badge.png",
-  },
-    {
-    name: "AWS Certified Solutions Architect",
-    image: "/certificates/aws_solution.png",
-  },
-  {
-    name: "Google Data Analytics Certificate",
-    image: "/certificates/image.png",
+    name: "Azure Data Engineer Associate",
+    image: "/certificates/microsoftazure.png",
   },
   {
     name: "Microsoft Azure Fundamentals",
