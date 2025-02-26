@@ -27,9 +27,6 @@ function App() {
         <div id="employment">
           <Employment />
         </div>
-        <div id="projects">
-          <Projects />
-        </div>
         <div id="technical">
           <Technical />
         </div>
