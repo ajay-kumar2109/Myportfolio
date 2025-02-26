@@ -7,7 +7,9 @@ import Employment from './components/Employment';
 import Projects from './components/Projects';
 import Technical from './components/Technical';
 import Contact from './components/Contact';
+import Certifications from './components/Certifications';
 import HireMePopup from './components/HireMePopup';
+
 function App() {
   const [activeSection, setActiveSection] = useState('home');
 
@@ -18,8 +20,11 @@ function App() {
         <div id="home">
           <Hero />
         </div>
-        <div id="about">
+        <div id="projects">
           <Projects />
+        </div>
+        <div id="Certifications">
+          <Certifications />
         </div>
         <div id="skills">
           <Skills />
