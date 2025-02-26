@@ -2,59 +2,56 @@ import { motion } from "framer-motion";
 
 const certifications = [
   {
-    name: "AWS Certified Cloud Practitioner",
+    title: "AWS Certified Solutions Architect",
     image: "/certificates/aws_solution.png",
   },
   {
-    name: "Microsoft Azure Fundamentals",
-    image: "https://fakeimg.pl/200x200/654321/ffffff?text=Azure",
+    title: "Google Data Analytics Certificate",
+    image: "https://fakeimg.pl/300x300/ff5733/ffffff?text=Google+Badge",
   },
   {
-    name: "Google Data Analytics",
-    image: "https://fakeimg.pl/200x200/ff5733/ffffff?text=Google+Analytics",
-  },
-  {
-    name: "PMP - Project Management Professional",
-    image: "https://fakeimg.pl/200x200/009688/ffffff?text=PMP",
+    title: "Microsoft Azure Fundamentals",
+    image: "https://fakeimg.pl/300x300/654321/ffffff?text=Azure+Badge",
   },
 ];
 
 const Certifications = () => {
   return (
-    <section id="certifications" className="py-16 bg-gray-900">
+    <section id="certifications" className="py-16 bg-gray-100">
       <div className="max-w-6xl mx-auto px-6">
         {/* Section Title */}
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-4xl font-bold text-white text-center mb-10"
+          className="text-4xl font-bold text-gray-900 text-center mb-10"
         >
           Certifications
         </motion.h2>
 
         {/* Certification Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {certifications.map((cert, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative bg-gray-800 rounded-3xl shadow-xl p-6 flex flex-col items-center 
-                        justify-center text-center transform hover:scale-105 transition-transform duration-300"
+              className="bg-white rounded-3xl shadow-lg p-6 flex flex-col items-center"
             >
-              {/* Certification Image */}
-              <div className="w-32 h-32 bg-gray-700 rounded-full flex items-center justify-center shadow-lg">
+              {/* Certification Badge */}
+              <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 flex items-center justify-center">
                 <img
                   src={cert.image}
-                  alt={cert.name}
-                  className="w-28 h-28 object-contain drop-shadow-lg"
+                  alt={cert.title}
+                  className="w-full h-full object-contain"
                 />
               </div>
 
-              {/* Certification Name */}
-              <h3 className="mt-4 text-lg font-semibold text-white">{cert.name}</h3>
+              {/* Certification Title */}
+              <h3 className="text-lg font-semibold text-gray-800 mt-4 text-center">
+                {cert.title}
+              </h3>
             </motion.div>
           ))}
         </div>
