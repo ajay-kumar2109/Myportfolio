@@ -128,7 +128,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
           >
-            Empowering Businesses with Scalable Data Solutions & Intelligent Applications
+            With over 4 years of experience in data engineering and machine learning, I specialize in designing and implementing scalable data solutions that drive business impact. 
           </motion.p>
 
           {/* Skills */}
