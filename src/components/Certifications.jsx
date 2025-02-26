@@ -7,7 +7,7 @@ const certifications = [
   },
   {
     name: "Google Data Analytics Certificate",
-    image: "/certificates/aws_solution.png",
+    image: "/certificates/image.png",
   },
   {
     name: "Microsoft Azure Fundamentals",
