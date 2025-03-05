@@ -1,6 +1,15 @@
 import { useState } from "react";
 
 const projectsData = [
+            {
+      title: "Credit Card Report Analysis",
+      description: "The dashboard provides real-time insights into key performance metrics and trends, empowering stakeholders to make informed decisions.",
+      tags: ["PowerBI"],
+      links: {
+        github: "https://github.com/ajay-kumar2109/Credit-Card-Analysis",
+      },
+      image: "/certificates/PowerBI-Demo.gif"
+    },
       {
       title: "FMCG Mart Supply Chain Analysis",
       description: "This is end-to-end project of Supply Chain in Fast-Moving Consumer Goods(FMCG) domain, in which a real business problem is solved and provided useful insights on an interactive dashboard to the stakeholders using Power BI.",
