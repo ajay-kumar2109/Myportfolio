@@ -8,7 +8,7 @@ const projectsData = [
       links: {
         github: "https://github.com/ajay-kumar2109/Credit-Card-Analysis",
       },
-      image: "/certificates/trans.png"
+      image: "/certificates/PowerBI-Demo.gif"
     },
       {
       title: "FMCG Mart Supply Chain Analysis",
