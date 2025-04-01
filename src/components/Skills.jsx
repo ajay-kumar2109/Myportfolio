@@ -8,7 +8,7 @@ const Skills = () => {
 
   const skillCategories = {
     dataAnalysis: {
-      title: "Data Analysis",
+      title: "SupplyChain Analysis",
       icon: "📊",
       colorClass: "bg-blue-500",
       borderClass: "border-blue-500",
