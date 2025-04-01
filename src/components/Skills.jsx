@@ -1,5 +1,3 @@
-export default Skills;
-
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { FaAws, FaPython, FaReact, FaDatabase, FaDocker } from 'react-icons/fa';
@@ -9,46 +7,46 @@ const Skills = () => {
   const [activeCategory, setActiveCategory] = useState('dataEngineering');
 
   const skillCategories = {
-    supplyChain: {
-      title: "Supply Chain Management",
-      icon: "🚛",
+    dataEngineering: {
+      title: "Data Engineering",
+      icon: "🔄",
       colorClass: "bg-blue-500",
       borderClass: "border-blue-500",
       iconClass: "text-blue-500",
       skills: [
-        { name: "Logistics Optimization", icon: <FaTruck />, level: 90 },
-        { name: "Inventory Management", icon: <FaWarehouse />, level: 85 },
-        { name: "Procurement", icon: "🛒", level: 80 },
-        { name: "Supply Planning", icon: "📦", level: 85 },
-        { name: "Demand Forecasting", icon: "📊", level: 90 }
+        { name: "Apache Spark", icon: <SiApachespark />, level: 90 },
+        { name: "Apache Kafka", icon: <SiApachekafka />, level: 85 },
+        { name: "AWS Glue", icon: <FaAws />, level: 80 },
+        { name: "Airflow", icon: "🔄", level: 85 },
+        { name: "ETL Pipeline", icon: "⚡", level: 90 }
       ]
     },
-    erpSystems: {
-      title: "ERP & Systems",
-      icon: "🔗",
+    cloudPlatforms: {
+      title: "Cloud & DevOps",
+      icon: "☁️",
       colorClass: "bg-purple-500",
       borderClass: "border-purple-500",
       iconClass: "text-purple-500",
       skills: [
-        { name: "SAP", icon: <SiSap />, level: 85 },
-        { name: "Oracle ERP", icon: <SiOracle />, level: 80 },
-        { name: "Microsoft Dynamics", icon: "💼", level: 75 },
-        { name: "NetSuite", icon: "🌐", level: 70 },
-        { name: "Odoo", icon: "🔄", level: 75 }
+        { name: "AWS", icon: <FaAws />, level: 85 },
+        { name: "Docker", icon: <FaDocker />, level: 80 },
+        { name: "CI/CD", icon: "🔄", level: 75 },
+        { name: "Kubernetes", icon: "⚓", level: 70 },
+        { name: "GCP", icon: "☁️", level: 75 }
       ]
     },
-    dataAnalytics: {
-      title: "Data & Analytics",
-      icon: "📈",
+    machineLearning: {
+      title: "Machine Learning",
+      icon: "🧠",
       colorClass: "bg-green-500",
       borderClass: "border-green-500",
       iconClass: "text-green-500",
       skills: [
-        { name: "Power BI", icon: <SiPowerbi />, level: 80 },
-        { name: "Tableau", icon: <SiTableau />, level: 85 },
-        { name: "Excel (Advanced)", icon: <SiExcel />, level: 90 },
-        { name: "SQL", icon: <FaDatabase />, level: 85 },
-        { name: "Python for Analytics", icon: "🐍", level: 75 }
+        { name: "TensorFlow", icon: <SiTensorflow />, level: 80 },
+        { name: "Scikit-Learn", icon: "🔬", level: 85 },
+        { name: "NLP", icon: "📝", level: 75 },
+        { name: "Deep Learning", icon: "🤖", level: 75 },
+        { name: "ML Ops", icon: "⚙️", level: 70 }
       ]
     },
     databases: {
@@ -65,18 +63,18 @@ const Skills = () => {
         { name: "SQL", icon: <FaDatabase />, level: 90 }
       ]
     },
-    inventory: {
-      title: "Inventory & Warehousing",
-      icon: "📦",
-      colorClass: "bg-yellow-500",
-      borderClass: "border-yellow-500",
-      iconClass: "text-yellow-500",
+    fullStack: {
+      title: "Full Stack",
+      icon: "💻",
+      colorClass: "bg-red-500",
+      borderClass: "border-red-500",
+      iconClass: "text-red-500",
       skills: [
-        { name: "Warehouse Management", icon: <FaBoxes />, level: 90 },
-        { name: "Inventory Optimization", icon: <FaWarehouse />, level: 85 },
-        { name: "Stock Replenishment", icon: "🔄", level: 80 },
-        { name: "FIFO/LIFO", icon: "📌", level: 75 },
-        { name: "ABC Analysis", icon: "🅰️", level: 90 }
+        { name: "Python", icon: <FaPython />, level: 90 },
+        { name: "React", icon: <FaReact />, level: 85 },
+        { name: "Node.js", icon: "⚡", level: 80 },
+        { name: "Django", icon: "🎯", level: 85 },
+        { name: "REST APIs", icon: "🔌", level: 90 }
       ]
     }
   };
