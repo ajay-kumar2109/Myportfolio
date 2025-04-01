@@ -1,6 +1,15 @@
 import { useState } from "react";
 
 const projectsData = [
+              {
+      title: "Supply Chain Analysis Using PowerBI",
+      description: "Conducted a comprehensive analysis of supply chain and shipment trends from 2015 to 2018, Including Customer Insights, Shipping Efficiency, Sales Composition and Geographic Analysis.",
+      tags: ["PowerBI"],
+      links: {
+        github: "https://github.com/ajay-kumar2109/Supply_Chain_Analysis-Using-PowerBI",
+      },
+      image: "/certificates/supplychain.png"
+    },
       {
       title: "FMCG Mart Supply Chain Analysis",
       description: "This is end-to-end project of Supply Chain in Fast-Moving Consumer Goods(FMCG) domain, in which a real business problem is solved and provided useful insights on an interactive dashboard to the stakeholders using Power BI.",
@@ -27,15 +36,6 @@ const projectsData = [
         github: "https://github.com/ajay-kumar2109/retailSales",
       },
       image: "/certificates/sales1.png"
-    },
-        {
-      title: "Supply Chain Analysis Using PowerBI",
-      description: "Conducted a comprehensive analysis of supply chain and shipment trends from 2015 to 2018, Including Customer Insights, Shipping Efficiency, Sales Composition and Geographic Analysis.",
-      tags: ["PowerBI"],
-      links: {
-        github: "https://github.com/ajay-kumar2109/Supply_Chain_Analysis-Using-PowerBI",
-      },
-      image: "/certificates/supplychain.png"
     },
     {
       title: "Tableau Dashboards",
