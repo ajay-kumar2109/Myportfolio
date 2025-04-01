@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { BiTable, BiData, BiCode, BiBarChartAlt2 } from "react-icons/bi"; // Icons for tools
 
 const Hero = () => {
   const skills = [
@@ -9,9 +10,14 @@ const Hero = () => {
     "Logistics & Transportation",
     "Data Visualization & Reporting",
     "ERP & SAP Systems",
-    ];
+  ];
 
-  const tools = ["Excel", "SQL", "Python", "Power BI"];
+  const tools = [
+    { name: "Excel", icon: <BiTable size={40} /> },
+    { name: "SQL", icon: <BiData size={40} /> },
+    { name: "Python", icon: <BiCode size={40} /> },
+    { name: "Power BI", icon: <BiBarChartAlt2 size={40} /> },
+  ];
 
   return (
     <section className="bg-gradient-to-b from-gray-50 to-white px-4 py-12 md:py-20 flex flex-col items-center min-h-screen w-full">
@@ -88,15 +94,16 @@ const Hero = () => {
         </p>
         <div className="flex justify-center gap-8 sm:gap-12 flex-wrap">
           {tools.map((tool, index) => (
-            <motion.span
+            <motion.div
               key={index}
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 1.2 + index * 0.1 }}
-              className="text-gray-700 text-lg font-medium"
+              className="flex flex-col items-center"
             >
-              {tool}
-            </motion.span>
+              <span className="text-gray-600">{tool.icon}</span>
+              <span className="text-gray-700 text-sm mt-2">{tool.name}</span>
+            </motion.div>
           ))}
         </div>
       </motion.div>
