@@ -12,43 +12,89 @@ const Hero = () => {
     "Process Improvement",
   ];
 
-  return (
-    <section className="bg-white text-gray-900 px-4 py-8 md:px-8 md:py-16 flex flex-col md:flex-row items-center justify-between min-h-screen w-full">
-      {/* Left Side - Intro */}
-      <div className="max-w-2xl w-full text-center md:text-left">
-        <motion.h1
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight"
-        >
-          Ajay Kumar Surada <br className="md:hidden" /> 
-          <span className="block mt-2 md:mt-0">Supply Chain Analyst</span>
-        </motion.h1>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-base sm:text-lg text-gray-600 mt-4"
-        >
-          Passionate about leveraging data analytics and process optimization to enhance operational efficiency. Expertise in demand forecasting, inventory management, logistics, and procurement with tools like Excel, SQL, Python, and Power BI.
-        </motion.p>
-      </div>
+  const tools = ["Excel", "SQL", "Python", "Power BI"];
 
-      {/* Right Side - Skills Cards */}
-      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-10 md:mt-0 w-full md:w-auto">
-        {skills.map((skill, index) => (
-          <motion.div
-            key={index}
+  return (
+    <section className="bg-gradient-to-b from-gray-50 to-white px-4 py-12 md:py-20 flex flex-col items-center min-h-screen w-full">
+      <div className="max-w-7xl w-full flex flex-col md:flex-row items-center justify-between">
+        {/* Left Side - Intro */}
+        <div className="max-w-lg w-full text-center md:text-left mb-12 md:mb-0">
+          <motion.h1
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 leading-tight"
+          >
+            Ajay Kumar Surada
+            <span className="block text-2xl sm:text-3xl md:text-4xl mt-2 text-gray-700">
+              Supply Chain Analyst
+            </span>
+            <span className="block w-32 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mt-4 mx-auto md:mx-0"></span>
+          </motion.h1>
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 * index }}
-            className="bg-gray-100 p-3 sm:p-4 rounded-xl shadow-md text-center text-xs sm:text-sm font-semibold"
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-base sm:text-lg text-gray-600 mt-6"
           >
-            {skill}
+            Passionate about leveraging data analytics and process optimization to enhance operational efficiency. Expertise in demand forecasting, inventory management, logistics, and procurement.
+          </motion.p>
+          {/* Hire Me Now Button (Plain HTML to avoid import issues) */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="mt-8"
+          >
+            <a
+              href="#contact"
+              className="inline-block px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-medium shadow-lg hover:from-blue-700 hover:to-purple-700 transition-all"
+            >
+              Hire Me Now
+            </a>
           </motion.div>
-        ))}
+        </div>
+
+        {/* Right Side - Skills Cards (Floating Effect) */}
+        <div className="relative w-full md:w-1/2 h-64 md:h-96">
+          {skills.map((skill, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.8, x: 50 }}
+              animate={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 * index }}
+              className="absolute bg-white p-4 rounded-lg shadow-lg text-center text-sm font-semibold text-gray-800 border border-gray-200"
+              style={{
+                top: `${10 + (index % 3) * 30}%`,
+                left: `${index % 2 === 0 ? 0 : 50}%`,
+                transform: `translateX(${index % 2 === 0 ? '0' : '-50%'})`,
+                width: "200px",
+              }}
+            >
+              {skill}
+            </motion.div>
+          ))}
+        </div>
       </div>
+
+      {/* Footer - Tools/Expertise */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8, delay: 1 }}
+        className="mt-12 text-center"
+      >
+        <p className="text-gray-600 text-sm mb-4">
+          Expertise in Tools & Technologies
+        </p>
+        <div className="flex justify-center gap-6 flex-wrap">
+          {tools.map((tool, index) => (
+            <span key={index} className="text-gray-700 font-medium">
+              {tool}
+            </span>
+          ))}
+        </div>
+      </motion.div>
     </section>
   );
 };
