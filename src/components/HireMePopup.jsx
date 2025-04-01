@@ -9,7 +9,7 @@ const HireMePopup = () => {
     const showPopup = () => {
       setIsVisible(true);
       // Hide after 5 seconds
-      setTimeout(() => setIsVisible(false), 5000);
+      setTimeout(() => setIsVisible(false), 2000);
     };
 
     // Initial delay of 20 seconds
@@ -18,7 +18,7 @@ const HireMePopup = () => {
     }, 20000);
 
     // Repeat every 20 seconds
-    const interval = setInterval(showPopup, 90000);
+    const interval = setInterval(showPopup, 100000);
 
     return () => {
       clearTimeout(initialTimeout);
