@@ -2,16 +2,16 @@ import { motion } from "framer-motion";
 
 const certifications = [
   {
+    name: "SAP Certified",
+    image: "/certificates/SAP_org.png",
+  },
+  {
+    name: "Six Sigma Green Belt Certified",
+    image: "/certificates/l6.png",
+  },
+  {
     name: "Google Data Analytics Certificate",
     image: "/certificates/image.png",
-  },
-  {
-    name: "Azure Data Engineer Associate",
-    image: "/certificates/microsoftazure.png",
-  },
-  {
-    name: "AWS Machine Learning",
-    image: "/certificates/ml.png",
   },
 ];
 
