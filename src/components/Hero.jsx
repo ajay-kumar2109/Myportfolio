@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
-import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   const skills = [
@@ -34,16 +33,6 @@ const Hero = () => {
         >
           Passionate about leveraging data analytics and process optimization to enhance operational efficiency. Expertise in demand forecasting, inventory management, logistics, and procurement with tools like Excel, SQL, Python, and Power BI.
         </motion.p>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="mt-6 flex justify-center md:justify-start"
-        >
-          <Button className="bg-purple-600 text-white px-6 py-3 rounded-lg shadow-lg text-base sm:text-lg hover:bg-purple-700 transition-colors">
-            Hire Me Now
-          </Button>
-        </motion.div>
       </div>
 
       {/* Right Side - Skills Cards */}
