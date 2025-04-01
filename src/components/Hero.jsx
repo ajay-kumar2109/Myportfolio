@@ -1,15 +1,17 @@
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
-import { BiTable, BiData, BiCode, BiBarChartAlt2 } from "react-icons/bi"; // Icons for tools
+import { BiTable, BiData, BiCode, BiBarChartAlt2 } from "react-icons/bi"; // For tools
+import { MdAnalytics, MdEventNote, MdInventory, MdLocalShipping, MdBarChart, MdSettings, MdBuild } from "react-icons/md"; // For skills
 
 const Hero = () => {
   const skills = [
-    "Supply Chain Analytics",
-    "Demand Planning & Forecasting",
-    "Inventory Optimization",
-    "Logistics & Transportation",
-    "Data Visualization & Reporting",
-    "ERP & SAP Systems",
+    { name: "Supply Chain Analytics", icon: <MdAnalytics size={24} /> },
+    { name: "Demand Planning & Forecasting", icon: <MdEventNote size={24} /> },
+    { name: "Inventory Optimization", icon: <MdInventory size={24} /> },
+    { name: "Logistics & Transportation", icon: <MdLocalShipping size={24} /> },
+    { name: "Data Visualization & Reporting", icon: <MdBarChart size={24} /> },
+    { name: "ERP & SAP Systems", icon: <MdSettings size={24} /> },
+    { name: "Process Improvement", icon: <MdBuild size={24} /> },
   ];
 
   const tools = [
@@ -60,23 +62,25 @@ const Hero = () => {
           </motion.div>
         </div>
 
-        {/* Right Side - Skills Cards (Floating Effect) */}
+        {/* Right Side - Skills Cards (Floating Effect Inspired by Image) */}
         <div className="relative w-full md:w-1/2 h-64 md:h-96">
           {skills.map((skill, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, scale: 0.8, x: 50 }}
-              animate={{ opacity: 1, scale: 1, x: 0 }}
+              initial={{ opacity: 0, scale: 0.8, x: 50, y: 20 }}
+              animate={{ opacity: 1, scale: 1, x: 0, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 * index }}
-              className="absolute bg-white p-4 rounded-lg shadow-lg text-center text-sm font-semibold text-gray-800 border border-gray-200"
+              whileHover={{ scale: 1.05, y: -5 }}
+              className="absolute bg-white p-4 rounded-lg shadow-lg text-gray-800 border border-gray-100 flex items-center space-x-3"
               style={{
                 top: `${10 + (index % 3) * 30}%`,
                 left: `${index % 2 === 0 ? 0 : 50}%`,
                 transform: `translateX(${index % 2 === 0 ? '0' : '-50%'})`,
-                width: "200px",
+                width: "220px",
               }}
             >
-              {skill}
+              <span className="text-blue-600">{skill.icon}</span>
+              <span className="text-sm font-semibold">{skill.name}</span>
             </motion.div>
           ))}
         </div>
