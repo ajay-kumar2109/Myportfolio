@@ -1,10 +1,12 @@
+export default Skills;
+
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { FaDatabase, FaChartLine, FaTruck, FaWarehouse, FaBoxes } from 'react-icons/fa';
-import { SiTableau, SiPowerbi, SiSap, SiOracle, SiExcel } from 'react-icons/si';
+import { FaAws, FaPython, FaReact, FaDatabase, FaDocker } from 'react-icons/fa';
+import { SiApachekafka, SiApachespark, SiTensorflow, SiMongodb, SiPostgresql } from 'react-icons/si';
 
 const Skills = () => {
-  const [activeCategory, setActiveCategory] = useState('supplyChain');
+  const [activeCategory, setActiveCategory] = useState('dataEngineering');
 
   const skillCategories = {
     supplyChain: {
@@ -49,6 +51,20 @@ const Skills = () => {
         { name: "Python for Analytics", icon: "🐍", level: 75 }
       ]
     },
+    databases: {
+      title: "Databases",
+      icon: "💾",
+      colorClass: "bg-yellow-500",
+      borderClass: "border-yellow-500",
+      iconClass: "text-yellow-500",
+      skills: [
+        { name: "PostgreSQL", icon: <SiPostgresql />, level: 90 },
+        { name: "MongoDB", icon: <SiMongodb />, level: 85 },
+        { name: "Redis", icon: "📊", level: 80 },
+        { name: "Cassandra", icon: "🗄️", level: 75 },
+        { name: "SQL", icon: <FaDatabase />, level: 90 }
+      ]
+    },
     inventory: {
       title: "Inventory & Warehousing",
       icon: "📦",
@@ -68,6 +84,7 @@ const Skills = () => {
   return (
     <section id="skills" className="py-20 bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-6xl mx-auto px-4">
+        {/* Section Title */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -78,10 +95,11 @@ const Skills = () => {
             <span className="font-mono text-blue-500">02.</span> Skills & Expertise
           </h2>
           <p className="text-xl text-gray-600">
-            Key competencies in supply chain and analytics
+            Technologies I work with
           </p>
         </motion.div>
 
+        {/* Category Selection */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {Object.entries(skillCategories).map(([key, category]) => (
             <motion.button
@@ -101,6 +119,7 @@ const Skills = () => {
           ))}
         </div>
 
+        {/* Skills Grid */}
         <motion.div
           key={activeCategory}
           initial={{ opacity: 0, y: 20 }}
@@ -123,6 +142,8 @@ const Skills = () => {
                 </span>
                 <h3 className="font-semibold text-gray-900">{skill.name}</h3>
               </div>
+              
+              {/* Progress Bar */}
               <div className="relative h-2 bg-gray-100 rounded-full overflow-hidden">
                 <motion.div
                   initial={{ width: 0 }}
@@ -131,6 +152,8 @@ const Skills = () => {
                   className={`absolute h-full ${skillCategories[activeCategory].colorClass}`}
                 />
               </div>
+              
+              {/* Skill Level */}
               <div className="mt-2 text-right">
                 <span className={`text-sm font-medium ${skillCategories[activeCategory].iconClass}`}>
                   {skill.level}%
@@ -139,10 +162,21 @@ const Skills = () => {
             </motion.div>
           ))}
         </motion.div>
+
+        {/* Additional Info */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="mt-12 text-center"
+        >
+          <p className="text-gray-600 italic">
+            And many more technologies I work with...
+          </p>
+        </motion.div>
       </div>
     </section>
   );
 };
 
 export default Skills;
-
