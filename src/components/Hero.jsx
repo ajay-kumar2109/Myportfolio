@@ -9,8 +9,6 @@ const Hero = () => {
     { name: "Demand Planning & Forecasting", icon: <MdEventNote size={24} /> },
     { name: "Inventory Optimization", icon: <MdInventory size={24} /> },
     { name: "Logistics & Transportation", icon: <MdLocalShipping size={24} /> },
-    { name: "Data Visualization & Reporting", icon: <MdBarChart size={24} /> },
-    { name: "ERP & SAP Systems", icon: <MdSettings size={24} /> },
   ];
 
   const tools = [
