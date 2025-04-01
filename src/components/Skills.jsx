@@ -7,18 +7,18 @@ const Skills = () => {
   const [activeCategory, setActiveCategory] = useState('dataEngineering');
 
   const skillCategories = {
-    supplyChain: {
-      title: "Supply Chain Management",
-      icon: "🚛",
+    dataEngineering: {
+      title: "Data Engineering",
+      icon: "🔄",
       colorClass: "bg-blue-500",
       borderClass: "border-blue-500",
       iconClass: "text-blue-500",
       skills: [
-        { name: "Logistics Optimization", icon: <FaTruck />, level: 90 },
-        { name: "Inventory Management", icon: <FaWarehouse />, level: 85 },
-        { name: "Procurement", icon: "🛒", level: 80 },
-        { name: "Supply Planning", icon: "📦", level: 85 },
-        { name: "Demand Forecasting", icon: "📊", level: 90 }
+        { name: "Apache Spark", icon: <SiApachespark />, level: 90 },
+        { name: "Apache Kafka", icon: <SiApachekafka />, level: 85 },
+        { name: "AWS Glue", icon: <FaAws />, level: 80 },
+        { name: "Airflow", icon: "🔄", level: 85 },
+        { name: "ETL Pipeline", icon: "⚡", level: 90 }
       ]
     },
     cloudPlatforms: {
@@ -177,4 +177,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default Skills1;
