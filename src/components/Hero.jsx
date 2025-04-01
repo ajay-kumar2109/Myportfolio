@@ -9,8 +9,7 @@ const Hero = () => {
     "Logistics & Transportation",
     "Data Visualization & Reporting",
     "ERP & SAP Systems",
-    "Process Improvement",
-  ];
+    ];
 
   const tools = ["Excel", "SQL", "Python", "Power BI"];
 
@@ -39,7 +38,7 @@ const Hero = () => {
           >
             Passionate about leveraging data analytics and process optimization to enhance operational efficiency. Expertise in demand forecasting, inventory management, logistics, and procurement.
           </motion.p>
-          {/* Hire Me Now Button (Plain HTML to avoid import issues) */}
+          {/* Hire Me Now Button */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -77,21 +76,27 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Footer - Tools/Expertise */}
+      {/* Footer - Expertise in Tools & Technologies */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 1 }}
-        className="mt-12 text-center"
+        className="mt-12 text-center w-full"
       >
-        <p className="text-gray-600 text-sm mb-4">
+        <p className="text-gray-500 text-sm mb-4">
           Expertise in Tools & Technologies
         </p>
-        <div className="flex justify-center gap-6 flex-wrap">
+        <div className="flex justify-center gap-8 sm:gap-12 flex-wrap">
           {tools.map((tool, index) => (
-            <span key={index} className="text-gray-700 font-medium">
+            <motion.span
+              key={index}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 1.2 + index * 0.1 }}
+              className="text-gray-700 text-lg font-medium"
+            >
               {tool}
-            </span>
+            </motion.span>
           ))}
         </div>
       </motion.div>
