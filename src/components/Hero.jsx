@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaMedium, FaEnvelope } from 'react-icons/fa';
 import { BiPackage, BiBarChartAlt2, BiTruck, BiTask } from 'react-icons/bi';
-import { GiFactory, GiConveyorBelt } from 'react-icons/gi';
+import { GiFactory, GiCargoShip } from 'react-icons/gi';
 
 const Hero = () => {
   return (
@@ -53,7 +53,7 @@ const Hero = () => {
           <motion.div className="grid grid-cols-2 md:grid-cols-3 gap-6 text-gray-700 mb-8"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}>
-            {[{ icon: <GiConveyorBelt size={30} />, text: 'Supply Chain Analytics' },
+            {[{ icon: <GiCargoShip size={30} />, text: 'Supply Chain Analytics' },
               { icon: <BiBarChartAlt2 size={30} />, text: 'Demand Planning' },
               { icon: <BiPackage size={30} />, text: 'Inventory Optimization' },
               { icon: <BiTruck size={30} />, text: 'Logistics & Transportation' },
