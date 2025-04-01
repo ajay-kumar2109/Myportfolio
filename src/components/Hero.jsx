@@ -112,12 +112,12 @@ const Hero = () => {
             transition={{ delay: 0.4 }}
           >
             <div className="flex items-center justify-center gap-4 flex-wrap">
-              <span>Data Engineer</span>
-              <span>💻</span>
-              <span>Data Analyst</span>
+              <span>Optimizing Supply Chains</span>
+              <span>📦</span>
+              <span>Driving Efficiency</span>
               <span>⚡</span>
-              <span>AI/ML Engineer</span>
-              <span>🧠</span>
+              <span>Seamless supply chain operations</span>
+              <span>🛒</span>
             </div>
           </motion.div>
 
@@ -128,7 +128,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
           >
-            With over 4 years of experience in data engineering and machine learning, I specialize in designing and implementing scalable data solutions that drive business impact. 
+            Supply Chain Analyst with a passion for leveraging data analytics and process optimization to improve operational efficiency. Experienced in demand forecasting, inventory management, logistics, and procurement, with expertise in tools like Excel, SQL, Python, and Power BI. 
           </motion.p>
 
           {/* Skills */}
@@ -138,7 +138,7 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
           >
-            {['Neural Networks', 'Deep Learning', 'NLP', 'Computer Vision', 'MLOps'].map((skill, index) => (
+            {['🌍 Global Supply Chain', '📈 Demand Forecasting', '🗂️ ERP & Inventory Management', '📊 Data Analytics & KPI Tracking', '⏳Lead Time & Efficiency'].map((skill, index) => (
               <motion.span
                 key={skill}
                 className="px-4 py-2 bg-blue-100 text-blue-600 rounded-full text-sm"
