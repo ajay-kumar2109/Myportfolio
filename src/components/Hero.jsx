@@ -1,62 +1,65 @@
-import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
-import { BiPackage, BiBarChartAlt2, BiTask } from 'react-icons/bi';
-import { GiFactory, GiCargoShip } from 'react-icons/gi';
+import { motion } from "framer-motion";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { BiPackage, BiBarChartAlt2, BiTask } from "react-icons/bi";
+import { GiFactory, GiCargoShip } from "react-icons/gi";
+import { Button } from "@/components/ui/button";
 
 const Hero = () => {
+  const skills = [
+    "Supply Chain Analytics",
+    "Demand Planning & Forecasting",
+    "Inventory Optimization",
+    "Logistics & Transportation",
+    "Data Visualization & Reporting",
+    "ERP & SAP Systems",
+    "Process Improvement",
+  ];
+
   return (
-    <section className="flex flex-col lg:flex-row items-center justify-between p-10 bg-white min-h-screen">
-      {/* Left Content */}
-      <div className="max-w-2xl text-left">
-        <motion.h1 
-          className="text-5xl font-bold text-gray-900"
+    <section className="bg-white text-gray-900 p-8 md:p-16 flex flex-col md:flex-row items-center justify-between min-h-screen">
+      <div className="max-w-2xl">
+        <motion.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 0.8 }}
+          className="text-4xl md:text-5xl font-bold leading-tight"
         >
-          {"Your Name"} <br />
-          <span className="text-indigo-600">Supply Chain Analyst</span>
+          {"Your Name"} <br /> Supply Chain Analyst
         </motion.h1>
-        <motion.p 
-          className="text-lg text-gray-700 mt-4"
+        <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.3 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-lg text-gray-600 mt-4"
         >
-          Passionate about leveraging data analytics and process optimization to improve operational efficiency.
-          Experienced in demand forecasting, inventory management, logistics, and procurement, with expertise in tools
-          like Excel, SQL, Python, and Power BI.
+          Passionate about leveraging data analytics and process optimization to enhance operational efficiency. Expertise in demand forecasting, inventory management, logistics, and procurement with tools like Excel, SQL, Python, and Power BI.
         </motion.p>
-        <motion.button 
-          className="mt-6 px-6 py-3 bg-indigo-600 text-white rounded-xl text-lg font-medium hover:bg-indigo-700"
-          initial={{ scale: 0.9, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="mt-6"
         >
-          Get Started →
-        </motion.button>
+          <Button className="bg-purple-600 text-white px-6 py-3 rounded-lg shadow-lg text-lg">
+            Hire Me Now
+          </Button>
+        </motion.div>
       </div>
-      
-      {/* Right Content (Animated Cards) */}
-      <motion.div 
-        className="relative w-full lg:w-1/2 flex justify-center mt-10 lg:mt-0"
-        initial={{ opacity: 0, x: 50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1, delay: 0.5 }}
-      >
-        <div className="absolute top-0 left-10 bg-indigo-100 p-4 rounded-lg shadow-md">
-          <BiBarChartAlt2 className="text-indigo-600 text-4xl" />
-          <p className="mt-2 text-gray-800 font-medium">Supply Chain Analytics</p>
-        </div>
-        <div className="absolute top-20 right-10 bg-yellow-100 p-4 rounded-lg shadow-md">
-          <GiFactory className="text-yellow-600 text-4xl" />
-          <p className="mt-2 text-gray-800 font-medium">Inventory Optimization</p>
-        </div>
-        <div className="absolute bottom-10 left-10 bg-green-100 p-4 rounded-lg shadow-md">
-          <GiCargoShip className="text-green-600 text-4xl" />
-          <p className="mt-2 text-gray-800 font-medium">Logistics & Transportation</p>
-        </div>
-      </motion.div>
+
+      {/* Skills Section */}
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-10 md:mt-0">
+        {skills.map((skill, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 * index }}
+            className="bg-gray-100 p-4 rounded-xl shadow-md text-center text-sm font-semibold"
+          >
+            {skill}
+          </motion.div>
+        ))}
+      </div>
     </section>
   );
 };
