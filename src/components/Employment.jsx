@@ -12,6 +12,12 @@ const Employment = () => {
       period: "Sep 2023 – Aug 2024",
       location: "Vancouver ,BC Canada",
       type: "data",
+      achievements: [
+        "Automated inventory analysis systems using Python, reducing waste by 15% and improving profit margins.",
+        "Built sales forecasting models with Python and statistical analysis, achieving 92% accuracy in projections.",
+        "Partnered with suppliers to align replenishment schedules, ensuring 100% on-time delivery for 10+ high-priority SKUs.",
+        "Designed VBA macros for financial reporting, saving 40+ hours/month in manual data preparation."
+      ],
       skills: ["Python", "SQL", "VBA", "Data Analysis", "Forecasting"],
       colorClass: {
         bg: "bg-blue-500",
@@ -26,6 +32,12 @@ const Employment = () => {
       period: "Feb 2022 – Dec 2022",
       location: "Chennai, India",
       type: "data",
+      achievements: [
+        "Automated inventory analysis systems using Python, reducing waste by 15% and improving profit margins.",
+        "Built sales forecasting models with Python and statistical analysis, achieving 92% accuracy in projections.",
+        "Partnered with suppliers to align replenishment schedules, ensuring 100% on-time delivery for 10+ high-priority SKUs.",
+        "Designed VBA macros for financial reporting, saving 40+ hours/month in manual data preparation."
+      ],
       skills: ["Python", "SQL", "Tableau", "Data Analytics", "Machine Learning"],
       colorClass: {
         bg: "bg-purple-500",
@@ -40,6 +52,12 @@ const Employment = () => {
       period: "Nov 2019 – Jan 2022",
       location: "Chennai, India",
       type: "data",
+      achievements: [
+        "Automated inventory analysis systems using Python, reducing waste by 15% and improving profit margins.",
+        "Built sales forecasting models with Python and statistical analysis, achieving 92% accuracy in projections.",
+        "Partnered with suppliers to align replenishment schedules, ensuring 100% on-time delivery for 10+ high-priority SKUs.",
+        "Designed VBA macros for financial reporting, saving 40+ hours/month in manual data preparation."
+      ],
       skills: ["SQL", "Power BI", "Python", "Data Optimization", "Logistics Analytics"],
       colorClass: {
         bg: "bg-green-500",
@@ -50,10 +68,16 @@ const Employment = () => {
     },
     {
       title: "Junior Data Analyst",
-      company: "Wipro",
+      company: "Essence",
       period: "Aug 2019 – June 2020",
       location: "Bangalore, India",
       type: "data",
+      achievements: [
+        "Automated inventory analysis systems using Python, reducing waste by 15% and improving profit margins.",
+        "Built sales forecasting models with Python and statistical analysis, achieving 92% accuracy in projections.",
+        "Partnered with suppliers to align replenishment schedules, ensuring 100% on-time delivery for 10+ high-priority SKUs.",
+        "Designed VBA macros for financial reporting, saving 40+ hours/month in manual data preparation."
+      ],
       skills: ["Excel", "Python", "A/B Testing", "Data Validation"],
       colorClass: {
         bg: "bg-orange-500",
