@@ -7,64 +7,77 @@ const Skills = () => {
   const [activeCategory, setActiveCategory] = useState('dataAnalysis');
 
   const skillCategories = {
-    dataAnalysis: {
-      title: "SupplyChain Analysis",
-      icon: "📊",
+    dataEngineering: {
+      title: "Data Engineering",
+      icon: "🔄",
       colorClass: "bg-blue-500",
       borderClass: "border-blue-500",
       iconClass: "text-blue-500",
       skills: [
-        { name: "Power BI", icon: <SiPowerbi />, level: 90 },
-        { name: "Tableau", icon: <SiTableau />, level: 85 },
-        { name: "SQL", icon: <FaDatabase />, level: 90 },
-        { name: "Excel (Advanced)", icon: "📑", level: 95 },
-        { name: "Data Visualization", icon: "📉", level: 85 }
+        { name: "Apache Spark", icon: <SiApachespark />, level: 90 },
+        { name: "Apache Kafka", icon: <SiApachekafka />, level: 85 },
+        { name: "AWS Glue", icon: <FaAws />, level: 80 },
+        { name: "Airflow", icon: "🔄", level: 85 },
+        { name: "ETL Pipeline", icon: "⚡", level: 90 }
       ]
     },
-    inventoryLogistics: {
-      title: "Inventory & Logistics",
-      icon: "📦",
-      colorClass: "bg-green-500",
-      borderClass: "border-green-500",
-      iconClass: "text-green-500",
-      skills: [
-        { name: "Inventory Management", icon: <FaClipboardList />, level: 90 },
-        { name: "Warehouse Operations", icon: "🏭", level: 85 },
-        { name: "Supply Chain Planning", icon: "🛒", level: 80 },
-        { name: "Logistics & Distribution", icon: <FaTruckLoading />, level: 85 },
-        { name: "SAP SCM", icon: <SiSap />, level: 75 }
-      ]
-    },
-    erpProcurement: {
-      title: "ERP & Procurement",
-      icon: "🖥️",
+    cloudPlatforms: {
+      title: "Cloud & DevOps",
+      icon: "☁️",
       colorClass: "bg-purple-500",
       borderClass: "border-purple-500",
       iconClass: "text-purple-500",
       skills: [
-        { name: "SAP ERP", icon: <SiSap />, level: 85 },
-        { name: "Oracle SCM", icon: "🔗", level: 80 },
-        { name: "Procurement Strategy", icon: "📜", level: 85 },
-        { name: "Vendor Management", icon: "🏢", level: 80 },
-        { name: "Contract Negotiation", icon: "✍️", level: 75 }
+        { name: "AWS", icon: <FaAws />, level: 85 },
+        { name: "Docker", icon: <FaDocker />, level: 80 },
+        { name: "CI/CD", icon: "🔄", level: 75 },
+        { name: "Kubernetes", icon: "⚓", level: 70 },
+        { name: "GCP", icon: "☁️", level: 75 }
       ]
     },
-    forecasting: {
-      title: "Forecasting & Demand Planning",
-      icon: "📈",
+    machineLearning: {
+      title: "Machine Learning",
+      icon: "🧠",
+      colorClass: "bg-green-500",
+      borderClass: "border-green-500",
+      iconClass: "text-green-500",
+      skills: [
+        { name: "TensorFlow", icon: <SiTensorflow />, level: 80 },
+        { name: "Scikit-Learn", icon: "🔬", level: 85 },
+        { name: "NLP", icon: "📝", level: 75 },
+        { name: "Deep Learning", icon: "🤖", level: 75 },
+        { name: "ML Ops", icon: "⚙️", level: 70 }
+      ]
+    },
+    databases: {
+      title: "Databases",
+      icon: "💾",
       colorClass: "bg-yellow-500",
       borderClass: "border-yellow-500",
       iconClass: "text-yellow-500",
       skills: [
-        { name: "Demand Forecasting", icon: <FaChartLine />, level: 90 },
-        { name: "Predictive Analytics", icon: "🔮", level: 85 },
-        { name: "Time Series Analysis", icon: "📅", level: 80 },
-        { name: "Scenario Planning", icon: "📋", level: 75 },
-        { name: "Azure ML", icon: <SiMicrosoftazure />, level: 70 }
+        { name: "PostgreSQL", icon: <SiPostgresql />, level: 90 },
+        { name: "MongoDB", icon: <SiMongodb />, level: 85 },
+        { name: "Redis", icon: "📊", level: 80 },
+        { name: "Cassandra", icon: "🗄️", level: 75 },
+        { name: "SQL", icon: <FaDatabase />, level: 90 }
+      ]
+    },
+    fullStack: {
+      title: "Full Stack",
+      icon: "💻",
+      colorClass: "bg-red-500",
+      borderClass: "border-red-500",
+      iconClass: "text-red-500",
+      skills: [
+        { name: "Python", icon: <FaPython />, level: 90 },
+        { name: "React", icon: <FaReact />, level: 85 },
+        { name: "Node.js", icon: "⚡", level: 80 },
+        { name: "Django", icon: "🎯", level: 85 },
+        { name: "REST APIs", icon: "🔌", level: 90 }
       ]
     }
   };
-
   return (
     <section id="skills" className="py-20 bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-6xl mx-auto px-4">
