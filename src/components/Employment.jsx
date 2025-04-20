@@ -7,10 +7,10 @@ const Employment = () => {
 
   const jobs = [
     {
-      title: "Data Engineer",
+      title: "Business Data Analyst",
       company: "Connex",
-      period: "Sep 2023 – Aug 2024",
-      location: "Vancouver ,BC Canada",
+      period: "Sep 2023 – Apr 2024",
+      location: "Hamilton, ON, Canada",
       type: "data",
       achievements: [
         "Automated inventory analysis systems using Python, reducing waste by 15% and improving profit margins.",
@@ -33,10 +33,10 @@ const Employment = () => {
       location: "Chennai, India",
       type: "data",
       achievements: [
-        "Automated inventory analysis systems using Python, reducing waste by 15% and improving profit margins.",
-        "Built sales forecasting models with Python and statistical analysis, achieving 92% accuracy in projections.",
-        "Partnered with suppliers to align replenishment schedules, ensuring 100% on-time delivery for 10+ high-priority SKUs.",
-        "Designed VBA macros for financial reporting, saving 40+ hours/month in manual data preparation."
+        "Automated Tableau dashboards for inventory KPIs, reducing manual reporting time by 50%.",
+        "Merged 5+ data sources using Python and SQL, ensuring 98% accuracy for analytics and reporting.",
+        "Conducted root cause analysis on sales fluctuations, resolving issues that boosted revenue by 5% for underperforming SKUs.",
+        "Built customer segmentation models in Python, increasing targeted campaign effectiveness by 10%."
       ],
       skills: ["Python", "SQL", "Tableau", "Data Analytics", "Machine Learning"],
       colorClass: {
@@ -53,10 +53,10 @@ const Employment = () => {
       location: "Chennai, India",
       type: "data",
       achievements: [
-        "Automated inventory analysis systems using Python, reducing waste by 15% and improving profit margins.",
-        "Built sales forecasting models with Python and statistical analysis, achieving 92% accuracy in projections.",
-        "Partnered with suppliers to align replenishment schedules, ensuring 100% on-time delivery for 10+ high-priority SKUs.",
-        "Designed VBA macros for financial reporting, saving 40+ hours/month in manual data preparation."
+        "Optimized SQL queries for large datasets, reducing processing time by 30% to support real-time inventory decisions.",
+        "Built Power BI dashboards to track stock levels, reducing stockouts by 12%.",
+        "Automated data extraction scripts in Python, saving 50+ hours/month in manual work.",
+        "Partnered with logistics teams to refine vendor performance metrics, improving compliance with contractual agreements."
       ],
       skills: ["SQL", "Power BI", "Python", "Data Optimization", "Logistics Analytics"],
       colorClass: {
@@ -68,15 +68,14 @@ const Employment = () => {
     },
     {
       title: "Junior Data Analyst",
-      company: "Essence",
-      period: "Aug 2019 – June 2020",
+      company: "Wipro",
+      period: "Dec 2018 – Sep 2019",
       location: "Bangalore, India",
       type: "data",
       achievements: [
-        "Automated inventory analysis systems using Python, reducing waste by 15% and improving profit margins.",
-        "Built sales forecasting models with Python and statistical analysis, achieving 92% accuracy in projections.",
-        "Partnered with suppliers to align replenishment schedules, ensuring 100% on-time delivery for 10+ high-priority SKUs.",
-        "Designed VBA macros for financial reporting, saving 40+ hours/month in manual data preparation."
+        "Developed Excel-based reports with automated refresh functionality, reducing manual effort by 20%.",
+        "Built Python scripts to validate vendor data, decreasing reporting errors by 10%.",
+        "Supported A/B testing for product launches, increasing feature adoption by 15% through data-driven insights."
       ],
       skills: ["Excel", "Python", "A/B Testing", "Data Validation"],
       colorClass: {
