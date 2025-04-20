@@ -26,7 +26,6 @@ const Employment = () => {
       period: "Feb 2022 – Dec 2022",
       location: "Chennai, India",
       type: "data",
-      achievements: [
       skills: ["Python", "SQL", "Tableau", "Data Analytics", "Machine Learning"],
       colorClass: {
         bg: "bg-purple-500",
