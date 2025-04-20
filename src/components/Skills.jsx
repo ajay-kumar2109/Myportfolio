@@ -1,10 +1,26 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { FaChartLine, FaDatabase, FaClipboardList, FaTruckLoading } from 'react-icons/fa';
-import { SiPowerbi, SiTableau, SiSap, SiMicrosoftazure } from 'react-icons/si';
+import {
+  FaDatabase,
+  FaAws,
+  FaDocker,
+  FaPython,
+  FaReact
+} from 'react-icons/fa';
+import {
+  SiPowerbi,
+  SiTableau,
+  SiSap,
+  SiMicrosoftazure,
+  SiPostgresql,
+  SiMongodb,
+  SiApachekafka,
+  SiApachespark,
+  SiTensorflow
+} from 'react-icons/si';
 
 const Skills = () => {
-  const [activeCategory, setActiveCategory] = useState('dataAnalysis');
+  const [activeCategory, setActiveCategory] = useState('dataEngineering');
 
   const skillCategories = {
     dataEngineering: {
@@ -78,14 +94,20 @@ const Skills = () => {
       ]
     }
   };
+
   return (
     <section id="skills" className="py-20 bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-6xl mx-auto px-4">
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             <span className="font-mono text-blue-500">02.</span> Skills & Expertise
           </h2>
-          <p className="text-xl text-gray-600">Supply Chain Technologies I Work With</p>
+          <p className="text-xl text-gray-600">Technologies I Work With</p>
         </motion.div>
 
         <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -96,7 +118,9 @@ const Skills = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className={`px-6 py-3 rounded-full flex items-center gap-2 transition-all duration-300 border-2 shadow-sm hover:shadow-md
-                ${activeCategory === key ? `${category.colorClass} text-white border-transparent` : `bg-white text-gray-700 ${category.borderClass} hover:bg-gray-50`}`}
+                ${activeCategory === key
+                  ? `${category.colorClass} text-white border-transparent`
+                  : `bg-white text-gray-700 ${category.borderClass} hover:bg-gray-50`}`}
             >
               <span className="text-xl">{category.icon}</span>
               {category.title}
@@ -104,18 +128,40 @@ const Skills = () => {
           ))}
         </div>
 
-        <motion.div key={activeCategory} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }} className="grid md:grid-cols-2 gap-6">
+        <motion.div
+          key={activeCategory}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
+          className="grid md:grid-cols-2 gap-6"
+        >
           {skillCategories[activeCategory].skills.map((skill, index) => (
-            <motion.div key={skill.name} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: index * 0.1 }} whileHover={{ scale: 1.02 }} className="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+            <motion.div
+              key={skill.name}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: index * 0.1 }}
+              whileHover={{ scale: 1.02 }}
+              className="bg-white p-6 rounded-xl shadow-md border border-gray-100"
+            >
               <div className="flex items-center gap-4 mb-4">
-                <span className={`text-2xl ${skillCategories[activeCategory].iconClass}`}>{typeof skill.icon === 'string' ? skill.icon : skill.icon}</span>
+                <span className={`text-2xl ${skillCategories[activeCategory].iconClass}`}>
+                  {skill.icon}
+                </span>
                 <h3 className="font-semibold text-gray-900">{skill.name}</h3>
               </div>
               <div className="relative h-2 bg-gray-100 rounded-full overflow-hidden">
-                <motion.div initial={{ width: 0 }} animate={{ width: `${skill.level}%` }} transition={{ duration: 1, ease: "easeOut" }} className={`absolute h-full ${skillCategories[activeCategory].colorClass}`} />
+                <motion.div
+                  initial={{ width: 0 }}
+                  animate={{ width: `${skill.level}%` }}
+                  transition={{ duration: 1, ease: "easeOut" }}
+                  className={`absolute h-full ${skillCategories[activeCategory].colorClass}`}
+                />
               </div>
               <div className="mt-2 text-right">
-                <span className={`text-sm font-medium ${skillCategories[activeCategory].iconClass}`}>{skill.level}%</span>
+                <span className={`text-sm font-medium ${skillCategories[activeCategory].iconClass}`}>
+                  {skill.level}%
+                </span>
               </div>
             </motion.div>
           ))}
