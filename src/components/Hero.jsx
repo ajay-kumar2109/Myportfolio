@@ -5,14 +5,14 @@ import { MdAnalytics, MdEventNote, MdInventory, MdLocalShipping, MdBarChart, MdS
 
 const Hero = () => {
   const skills = [
-    { name: "Supply Chain Analytics", icon: <MdAnalytics size={24} /> },
-    { name: "Demand Planning & Forecasting", icon: <MdEventNote size={24} /> },
-    { name: "Inventory Optimization", icon: <MdInventory size={24} /> },
-    { name: "Logistics & Transportation", icon: <MdLocalShipping size={24} /> },
+    { name: "ETL/ELT pipeline", icon: <MdAnalytics size={24} /> },
+    { name: "Azure Data Factory, SSIS, and Azure Databricks", icon: <MdEventNote size={24} /> },
+    { name: "Data modeling ", icon: <MdInventory size={24} /> },
+    { name: "advanced analytics and reporting", icon: <MdLocalShipping size={24} /> },
   ];
 
   const tools = [
-    { name: "Excel", icon: <BiTable size={32} /> },
+    { name: "Cloud", icon: <BiTable size={32} /> },
     { name: "SQL", icon: <BiData size={32} /> },
     { name: "Python", icon: <BiCode size={32} /> },
     { name: "Power BI", icon: <BiBarChartAlt2 size={32} /> },
@@ -31,7 +31,7 @@ const Hero = () => {
           >
             Ajay Kumar Surada
             <span className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl mt-2 text-gray-700">
-              Supply Chain Analyst
+              Data Engineer
             </span>
             <span className="block w-24 sm:w-32 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mt-4 mx-auto md:mx-0"></span>
           </motion.h1>
@@ -41,7 +41,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-sm sm:text-base md:text-lg text-gray-600 mt-4 md:mt-6"
           >
-            Passionate about leveraging data analytics and process optimization to enhance operational efficiency. Expertise in demand forecasting, inventory management, logistics, and procurement.
+             Results-driven Data Engineer with proven expertise in building resilient, scalable ETL/ELT pipelines using Azure Data Factory, SSIS, and Azure Databricks, enabling high-volume data ingestion from relational (SQL Server, Teradata, Oracle, DB2) and non-relational (Flat Files, JSON, XML) sources into Azure Data Lake Gen2 and SQL Data Warehouse.
           </motion.p>
           {/* Hire Me Now Button */}
           <motion.div
