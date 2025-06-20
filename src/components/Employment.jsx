@@ -14,9 +14,9 @@ const Employment = () => {
       type: "data",
       achievements: [
         "Partnered with General and Operations Managers to monitor sales, margin, and cost KPIs across retail stores and ecommerce channels, aligning daily results with overall budget targets.",
-        "Built sales forecasting models with Python and statistical analysis, achieving 92% accuracy in projections.",
+        "Built and maintained seasonal inventory planning models in Excel, forecasting purchasing volumes to meet demand without exceeding stock or spend constraints",
         "Designed Power BI dashboards tracking sales performance, traffic, conversion, labor utilization, and expense ratios to provide a real-time overview of store operations",
-        "Designed VBA macros for financial reporting, saving 40+ hours/month in manual data preparation."
+        "Analyzed weekly and monthly retail sales trends across regions and categories to identify underperforming segments and opportunities for growth."
       ],
       skills: ["Python", "SQL", "VBA", "Data Analysis", "Forecasting"],
       colorClass: {
@@ -53,10 +53,10 @@ const Employment = () => {
       location: "Chennai, India",
       type: "data",
       achievements: [
-        "Automated inventory analysis systems using Python, reducing waste by 15% and improving profit margins.",
-        "Built sales forecasting models with Python and statistical analysis, achieving 92% accuracy in projections.",
-        "Partnered with suppliers to align replenishment schedules, ensuring 100% on-time delivery for 10+ high-priority SKUs.",
-        "Designed VBA macros for financial reporting, saving 40+ hours/month in manual data preparation."
+        "Extracted and analyzed data from multiple sources using SQL, identifying trends and patterns to support strategic business decisions.",
+        "reated dynamic Power BI dashboards with advanced DAX calculations, enabling stakeholders to explore key performance indicators interactively.",
+        "Assisted in maintaining and updating prebuilt Power BI dashboards to reflect business changes, ensuring reports remained relevant and accurate",
+        "Built Excel models with advanced formulas and pivot tables, streamlining data analysis for ad-hoc business requests"
       ],
       skills: ["SQL", "Power BI", "Python", "Data Optimization", "Logistics Analytics"],
       colorClass: {
