@@ -128,7 +128,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
           >
-            Results-driven Data Engineer with proven expertise in building resilient, scalable ETL/ELT pipelines using Azure Data Factory, SSIS, and Azure Databricks, enabling high-volume data ingestion from relational (SQL Server, Teradata, Oracle, DB2) and non-relational (Flat Files, JSON, XML) sources into Azure Data Lake Gen2 and SQL Data Warehouse.
+            Data Analyst with hands-on experience supporting retail operations through data-driven decision-making, budget monitoring, and performance reporting across both brick-and-mortar and e-commerce channels
  
           </motion.p>
 
@@ -139,7 +139,7 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
           >
-            {['Data Engineering', '📈 Azure Data Factory, SSIS, and Azure Databricks', '🗂️ Data Modelling', '📊 Power BI', '⏳SQL'].map((skill, index) => (
+            {['Financial & Retail Analytics','Excel', '📊 Power BI', '⏳SQL'].map((skill, index) => (
               <motion.span
                 key={skill}
                 className="px-4 py-2 bg-blue-100 text-blue-600 rounded-full text-sm"
