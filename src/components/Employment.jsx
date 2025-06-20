@@ -15,8 +15,7 @@ const Employment = () => {
       achievements: [
         "Partnered with General and Operations Managers to monitor sales, margin, and cost KPIs across retail stores and ecommerce channels, aligning daily results with overall budget targets.",
         "Built and maintained seasonal inventory planning models in Excel, forecasting purchasing volumes to meet demand without exceeding stock or spend constraints.",
-        "Designed Power BI dashboards tracking sales performance, traffic, conversion, labor utilization, and expense ratios to provide a real-time overview of store operations.,
-        "Designed VBA macros for financial reporting, saving 40+ hours/month in manual data preparation."
+        "Designed Power BI dashboards tracking sales performance, traffic, conversion, labor utilization, and expense ratios to provide a real-time overview of store operations.
       ],
       skills: ["Python", "SQL", "VBA", "Data Analysis", "Forecasting"],
       colorClass: {
