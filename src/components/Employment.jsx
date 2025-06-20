@@ -7,15 +7,15 @@ const Employment = () => {
 
   const jobs = [
     {
-      title: "Data Engineer",
-      company: "Connex",
+      title: "Data Analyst",
+      company: "Canadian Tire",
       period: "Sep 2023 – Aug 2024",
       location: "Vancouver ,BC Canada",
       type: "data",
       achievements: [
-        "Automated inventory analysis systems using Python, reducing waste by 15% and improving profit margins.",
-        "Built sales forecasting models with Python and statistical analysis, achieving 92% accuracy in projections.",
-        "Partnered with suppliers to align replenishment schedules, ensuring 100% on-time delivery for 10+ high-priority SKUs.",
+        "Partnered with General and Operations Managers to monitor sales, margin, and cost KPIs across retail stores and ecommerce channels, aligning daily results with overall budget targets.",
+        "Built and maintained seasonal inventory planning models in Excel, forecasting purchasing volumes to meet demand without exceeding stock or spend constraints.",
+        "Designed Power BI dashboards tracking sales performance, traffic, conversion, labor utilization, and expense ratios to provide a real-time overview of store operations.,
         "Designed VBA macros for financial reporting, saving 40+ hours/month in manual data preparation."
       ],
       skills: ["Python", "SQL", "VBA", "Data Analysis", "Forecasting"],
@@ -34,9 +34,8 @@ const Employment = () => {
       type: "data",
       achievements: [
         "Automated inventory analysis systems using Python, reducing waste by 15% and improving profit margins.",
-        "Built sales forecasting models with Python and statistical analysis, achieving 92% accuracy in projections.",
-        "Partnered with suppliers to align replenishment schedules, ensuring 100% on-time delivery for 10+ high-priority SKUs.",
-        "Designed VBA macros for financial reporting, saving 40+ hours/month in manual data preparation."
+        "Helped built sales forecasting models with Python and statistical analysis, achieving 92% accuracy in projections.",
+        "Partnered with suppliers to align replenishment schedules, ensuring 100% on-time delivery for 10+ high-priority SKUs."
       ],
       skills: ["Python", "SQL", "Tableau", "Data Analytics", "Machine Learning"],
       colorClass: {
@@ -49,7 +48,7 @@ const Employment = () => {
     {
       title: "Data Analyst",
       company: "Cognizant",
-      period: "Nov 2019 – Jan 2022",
+      period: "Nov 2020 – Jan 2022",
       location: "Chennai, India",
       type: "data",
       achievements: [
@@ -64,26 +63,6 @@ const Employment = () => {
         text: "text-green-500",
         light: "bg-green-100",
         lightText: "text-green-700"
-      }
-    },
-    {
-      title: "Junior Data Analyst",
-      company: "Essence",
-      period: "Aug 2019 – June 2020",
-      location: "Bangalore, India",
-      type: "data",
-      achievements: [
-        "Automated inventory analysis systems using Python, reducing waste by 15% and improving profit margins.",
-        "Built sales forecasting models with Python and statistical analysis, achieving 92% accuracy in projections.",
-        "Partnered with suppliers to align replenishment schedules, ensuring 100% on-time delivery for 10+ high-priority SKUs.",
-        "Designed VBA macros for financial reporting, saving 40+ hours/month in manual data preparation."
-      ],
-      skills: ["Excel", "Python", "A/B Testing", "Data Validation"],
-      colorClass: {
-        bg: "bg-orange-500",
-        text: "text-orange-500",
-        light: "bg-orange-100",
-        lightText: "text-orange-700"
       }
     }
   ];
