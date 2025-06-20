@@ -7,15 +7,15 @@ const Employment = () => {
 
   const jobs = [
     {
-      title: "Data Engineer",
-      company: "Connex",
+      title: "Data Analyst",
+      company: "Canadian tire",
       period: "Sep 2023 – Aug 2024",
       location: "Vancouver ,BC Canada",
       type: "data",
       achievements: [
-        "Automated inventory analysis systems using Python, reducing waste by 15% and improving profit margins.",
+        "Partnered with General and Operations Managers to monitor sales, margin, and cost KPIs across retail stores and ecommerce channels, aligning daily results with overall budget targets.",
         "Built sales forecasting models with Python and statistical analysis, achieving 92% accuracy in projections.",
-        "Partnered with suppliers to align replenishment schedules, ensuring 100% on-time delivery for 10+ high-priority SKUs.",
+        "Designed Power BI dashboards tracking sales performance, traffic, conversion, labor utilization, and expense ratios to provide a real-time overview of store operations",
         "Designed VBA macros for financial reporting, saving 40+ hours/month in manual data preparation."
       ],
       skills: ["Python", "SQL", "VBA", "Data Analysis", "Forecasting"],
