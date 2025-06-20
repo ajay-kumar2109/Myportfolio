@@ -54,7 +54,7 @@ const Employment = () => {
       type: "data",
       achievements: [
         "Extracted and analyzed data from multiple sources using SQL, identifying trends and patterns to support strategic business decisions.",
-        "reated dynamic Power BI dashboards with advanced DAX calculations, enabling stakeholders to explore key performance indicators interactively.",
+        "Created dynamic Power BI dashboards with advanced DAX calculations, enabling stakeholders to explore key performance indicators interactively.",
         "Assisted in maintaining and updating prebuilt Power BI dashboards to reflect business changes, ensuring reports remained relevant and accurate",
         "Built Excel models with advanced formulas and pivot tables, streamlining data analysis for ad-hoc business requests"
       ],
@@ -64,26 +64,6 @@ const Employment = () => {
         text: "text-green-500",
         light: "bg-green-100",
         lightText: "text-green-700"
-      }
-    },
-    {
-      title: "Junior Data Analyst",
-      company: "Essence",
-      period: "Aug 2019 – June 2020",
-      location: "Bangalore, India",
-      type: "data",
-      achievements: [
-        "Automated inventory analysis systems using Python, reducing waste by 15% and improving profit margins.",
-        "Built sales forecasting models with Python and statistical analysis, achieving 92% accuracy in projections.",
-        "Partnered with suppliers to align replenishment schedules, ensuring 100% on-time delivery for 10+ high-priority SKUs.",
-        "Designed VBA macros for financial reporting, saving 40+ hours/month in manual data preparation."
-      ],
-      skills: ["Excel", "Python", "A/B Testing", "Data Validation"],
-      colorClass: {
-        bg: "bg-orange-500",
-        text: "text-orange-500",
-        light: "bg-orange-100",
-        lightText: "text-orange-700"
       }
     }
   ];
